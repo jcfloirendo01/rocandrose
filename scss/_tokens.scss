@@ -1,0 +1,33 @@
+// ─── Typography ───────────────────────────────────────────────────────────────
+$font-serif:  'Instrument Serif', 'Times New Roman', serif;
+$font-sans:   'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono:   'JetBrains Mono', ui-monospace, monospace;
+
+// ─── Brand colors ─────────────────────────────────────────────────────────────
+$coral:       #E75D4A;
+$blue:        #367FB6;
+$blue-light:  #7BB6E0;
+$ink:         #0E0D0B;
+$paper:       #F5F1EB;
+$paper-deep:  #EDE6DA;
+
+$line:        rgba(14, 13, 11, .12);
+$line-dark:   rgba(245, 241, 235, .14);
+$mute:        rgba(14, 13, 11, .55);
+$mute-dark:   rgba(245, 241, 235, .55);
+
+// ─── Spacing ──────────────────────────────────────────────────────────────────
+$section-pad: 140px;
+$container:   1440px;
+$gutter:      40px;
+
+// ─── Breakpoints ──────────────────────────────────────────────────────────────
+$bp-mobile:   600px;
+$bp-tablet:   900px;
+$bp-desktop:  1200px;
+$bp-wide:     1440px;
+
+// ─── Easing ───────────────────────────────────────────────────────────────────
+$ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+$ease-out-quart:  cubic-bezier(0.25, 1, 0.5, 1);
+$ease-in-out:     cubic-bezier(0.65, 0, 0.35, 1);

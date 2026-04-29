@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Roc &amp; Rose Digital</title>
+  <meta name="description" content="Brief us on your project. We respond within one business day from our Fitzroy studio in Melbourne." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<div class="cursor-outer" style="position:fixed;pointer-events:none;z-index:10000;mix-blend-mode:difference;"></div>
+<div class="cursor-inner" style="position:fixed;pointer-events:none;z-index:10001;mix-blend-mode:difference;"></div>
+
+<nav class="nav nav--sticky" style="position:fixed;">
+  <a class="nav__logo" href="index.html">
+    <span class="nav__logo-mark">R</span>
+    <span class="nav__logo-name">Roc &amp; Rose</span>
+  </a>
+  <div class="nav__links hide-mobile">
+    <a class="nav__link" href="services.html">Services</a>
+    <a class="nav__link" href="work.html">Work</a>
+    <a class="nav__link" href="index.html#process">Process</a>
+    <a class="nav__link" href="index.html#studio">Studio</a>
+    <a class="nav__link" href="contact.html">Contact</a>
+    <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+  </div>
+  <button class="nav__hamburger show-mobile" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu">
+  <button class="mobile-menu__close" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <ul class="mobile-menu__links">
+    <li><a class="mobile-menu__link" href="services.html">Services</a></li>
+    <li><a class="mobile-menu__link" href="work.html">Work</a></li>
+    <li><a class="mobile-menu__link" href="index.html#process">Process</a></li>
+    <li><a class="mobile-menu__link" href="index.html#studio">Studio</a></li>
+    <li><a class="mobile-menu__link" href="contact.html"><em>Contact</em></a></li>
+  </ul>
+  <p class="mobile-menu__footer">Roc &amp; Rose · Fitzroy · Melbourne · Est. 2017</p>
+</div>
+
+<div data-barba="wrapper">
+<main data-barba="container" data-barba-namespace="contact">
+
+  <div class="contact-page">
+    <!-- Full-page silk canvas -->
+    <canvas
+      class="contact-page__canvas"
+      data-silk-hero
+      data-coral="#E75D4A"
+      data-blue="#367FB6"
+      data-bg="#0E0D0B"
+      data-intensity="0.55"
+      data-ribbons="5"
+      data-grain="0.04"
+      aria-hidden="true"
+    ></canvas>
+    <div class="contact-page__overlay" aria-hidden="true"></div>
+
+    <div class="contact-page__content">
+
+      <!-- Nav (absolute inside page) -->
+      <header class="nav" style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;">
+        <a class="nav__logo" href="index.html">
+          <span class="nav__logo-mark">R</span>
+          <span class="nav__logo-name">Roc &amp; Rose</span>
+        </a>
+        <div class="nav__links hide-mobile">
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="work.html">Work</a>
+          <a class="nav__link" href="index.html#process">Process</a>
+          <a class="nav__link" href="index.html#studio">Studio</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+          <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+        </div>
+        <button class="nav__hamburger show-mobile" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
+
+      <section class="contact-page__section">
+        <div class="contact-page__grid">
+
+          <!-- Left sidebar -->
+          <div class="contact-page__sidebar">
+            <span class="eyebrow eyebrow--dark">
+              <span class="eyebrow__dot"></span>
+              Contact · We read every brief
+            </span>
+            <h1 class="contact-page__headline">
+              Tell us what<br />
+              you're <em>building</em>.
+            </h1>
+            <p class="contact-page__intro">
+              Briefs land with our partners directly. Expect a real
+              response within one business day — usually faster.
+            </p>
+
+            <div class="contact-page__details">
+              <div>
+                <div class="contact-page__detail-label">Email</div>
+                <div class="contact-page__detail-value">hello@rocandrose.studio</div>
+              </div>
+              <div>
+                <div class="contact-page__detail-label">Phone</div>
+                <div class="contact-page__detail-value">+61 3 9417 0042</div>
+              </div>
+              <div>
+                <div class="contact-page__detail-label">Studio</div>
+                <div class="contact-page__detail-value">Lvl 2, 184 Gertrude St
+Fitzroy VIC 3065</div>
+              </div>
+              <div>
+                <div class="contact-page__detail-label">Hours</div>
+                <div class="contact-page__detail-value">Mon–Thu · 8:30–6
+Fri · by appointment</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form column -->
+          <div>
+            <!-- Form -->
+            <div class="contact-page__form-wrap">
+              <form class="contact-page__form" novalidate>
+                <div class="contact-page__form-row">
+                  <div>
+                    <label class="contact-page__label" for="contact-name">Your name</label>
+                    <input class="contact-page__input" id="contact-name" type="text" required placeholder="Jess Halberd" autocomplete="name" />
+                  </div>
+                  <div>
+                    <label class="contact-page__label" for="contact-company">Company</label>
+                    <input class="contact-page__input" id="contact-company" type="text" required placeholder="Halberd &amp; Co." autocomplete="organization" />
+                  </div>
+                  <div>
+                    <label class="contact-page__label" for="contact-email">Email</label>
+                    <input class="contact-page__input" id="contact-email" type="email" required placeholder="jess@example.com" autocomplete="email" />
+                  </div>
+                  <div>
+                    <label class="contact-page__label" for="contact-phone">Phone <span style="opacity:.5">(optional)</span></label>
+                    <input class="contact-page__input" id="contact-phone" type="tel" placeholder="+61 …" autocomplete="tel" />
+                  </div>
+                </div>
+
+                <!-- Services chips -->
+                <div class="contact-page__field">
+                  <span class="contact-page__chips-label">Services you're interested in</span>
+                  <div class="contact-page__chips" role="group" aria-label="Select services">
+                    <button type="button" class="contact-page__chip" data-chip>Strategy</button>
+                    <button type="button" class="contact-page__chip" data-chip>Brand</button>
+                    <button type="button" class="contact-page__chip" data-chip>Web</button>
+                    <button type="button" class="contact-page__chip is-active" data-chip>Paid Media</button>
+                    <button type="button" class="contact-page__chip" data-chip>SEO</button>
+                    <button type="button" class="contact-page__chip" data-chip>Social &amp; Content</button>
+                    <button type="button" class="contact-page__chip" data-chip>Email &amp; Lifecycle</button>
+                    <button type="button" class="contact-page__chip" data-chip>CRO</button>
+                    <button type="button" class="contact-page__chip" data-chip>Video</button>
+                  </div>
+                </div>
+
+                <!-- Budget chips -->
+                <div class="contact-page__field">
+                  <span class="contact-page__chips-label">Estimated budget</span>
+                  <div class="contact-page__chips" role="group" aria-label="Select budget">
+                    <button type="button" class="contact-page__chip" data-chip>&lt;$10K / mo</button>
+                    <button type="button" class="contact-page__chip" data-chip>$10–25K / mo</button>
+                    <button type="button" class="contact-page__chip is-active" data-chip>$25–50K / mo</button>
+                    <button type="button" class="contact-page__chip" data-chip>$50K+ / mo</button>
+                    <button type="button" class="contact-page__chip" data-chip>Project-based</button>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="contact-page__field">
+                  <label class="contact-page__label" for="contact-message">Tell us about the project</label>
+                  <textarea
+                    class="contact-page__textarea"
+                    id="contact-message"
+                    required
+                    placeholder="A few sentences on the brand, the goal, and why now. Links welcome."
+                  ></textarea>
+                </div>
+
+                <!-- Submit row -->
+                <div class="contact-page__form-footer">
+                  <p class="contact-page__privacy">
+                    By sending you agree to our brief privacy policy. We
+                    never share or sell your details.
+                  </p>
+                  <button type="submit" class="contact-page__submit">
+                    Send brief
+                    <span class="contact-page__submit-icon" aria-hidden="true">→</span>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Success state (hidden by default) -->
+              <div class="contact-page__success" style="display:none;" aria-live="polite">
+                <div class="contact-page__success-icon" aria-hidden="true">✓</div>
+                <h2 class="contact-page__success-headline">Brief received.</h2>
+                <p class="contact-page__success-body">
+                  One of our partners will be in touch within one
+                  business day. In the meantime, the kettle's on.
+                </p>
+                <button
+                  type="button"
+                  data-reset-form
+                  style="appearance:none;border:0;background:rgba(245,241,235,.08);color:#F5F1EB;padding:12px 24px;border-radius:999px;font-family:'Geist',sans-serif;font-size:14px;font-weight:500;cursor:pointer;"
+                >Send another →</button>
+              </div>
+            </div>
+
+            <!-- Quick options -->
+            <div class="contact-page__quick-opts">
+              <a class="contact-page__quick-opt" href="#">
+                <span class="contact-page__quick-opt-icon" aria-hidden="true">☎</span>
+                <div>
+                  <div class="contact-page__quick-opt-title">Book a 30-min intro call</div>
+                  <div class="contact-page__quick-opt-sub">Skip the form, jump straight to a Zoom.</div>
+                </div>
+              </a>
+              <a class="contact-page__quick-opt" href="#">
+                <span class="contact-page__quick-opt-icon" aria-hidden="true">☕</span>
+                <div>
+                  <div class="contact-page__quick-opt-title">Visit the studio in Fitzroy</div>
+                  <div class="contact-page__quick-opt-sub">Drop in any Thursday. Coffee's on us.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Minimal footer -->
+      <footer style="position:relative;z-index:2;padding:40px;border-top:1px solid rgba(245,241,235,.12);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,235,.4);">
+        <span>© 2026 Roc &amp; Rose Digital · ABN 47 218 991 044</span>
+        <nav style="display:flex;gap:24px;">
+          <a href="index.html" style="color:rgba(245,241,235,.4);text-decoration:none;">Home</a>
+          <a href="services.html" style="color:rgba(245,241,235,.4);text-decoration:none;">Services</a>
+          <a href="work.html" style="color:rgba(245,241,235,.4);text-decoration:none;">Work</a>
+          <a href="#" style="color:rgba(245,241,235,.4);text-decoration:none;">Privacy</a>
+        </nav>
+      </footer>
+
+    </div><!-- end contact-page__content -->
+  </div>
+
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core/dist/barba.umd.min.js"></script>
+<script src="js/silk-hero.js"></script>
+<script src="js/lenis-init.js"></script>
+<script src="js/gsap-animations.js"></script>
+<script src="js/barba-transitions.js"></script>
+
+</body>
+</html>

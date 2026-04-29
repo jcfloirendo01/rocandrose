@@ -1,0 +1,48 @@
+// ─── Roc & Rose Digital — Main Stylesheet ─────────────────────────────────────
+// Import order matters: tokens → base → components → pages
+
+@use 'tokens' as *;
+@use 'base';
+@use 'cursor';
+@use 'nav';
+@use 'hero';
+@use 'sections';
+@use 'pages';
+
+// ─── Google Fonts (loaded in HTML head) ───────────────────────────────────────
+// Instrument Serif · Geist · JetBrains Mono
+
+// ─── Additional global utilities ──────────────────────────────────────────────
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s $ease-out-expo, transform .8s $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .7s $ease-out-expo, transform .7s $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

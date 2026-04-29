@@ -1,0 +1,63 @@
+@use 'tokens' as *;
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-outer,
+  .cursor-inner { display: none !important; }
+
+  body, button { cursor: auto !important; }
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: difference;
+
+  &-outer {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: width .3s $ease-out-expo, height .3s $ease-out-expo, background .3s, border-color .3s;
+    will-change: transform;
+  }
+
+  &-inner {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    will-change: transform;
+  }
+}
+
+// Hover states
+body.cursor-hover {
+  .cursor-outer {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, .1);
+  }
+}
+
+body.cursor-text {
+  .cursor-outer {
+    width: 80px;
+    height: 80px;
+    background: rgba($coral, .15);
+    border-color: rgba($coral, .5);
+  }
+}
+
+body.cursor-link {
+  .cursor-outer {
+    width: 48px;
+    height: 48px;
+    background: rgba($coral, .2);
+    border-color: $coral;
+  }
+}

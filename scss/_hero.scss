@@ -1,0 +1,190 @@
+@use 'tokens' as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: $ink;
+  color: $paper;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__scrim {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 90%, rgba($ink, .6) 0%, rgba($ink, 0) 60%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--gutter);
+    max-width: $container;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__eyebrow {
+    margin-top: 80px;
+    margin-bottom: 24px;
+    opacity: 0;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(56px, 9vw, 148px);
+    line-height: 1.02;
+    letter-spacing: -.035em;
+    margin: 0;
+    max-width: 14ch;
+    padding-bottom: .08em;
+    overflow: hidden;
+
+    em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .word {
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .char {
+      display: inline-block;
+      transform: translateY(110%);
+    }
+  }
+
+  &__coral { color: $coral; }
+  &__blue  { color: $blue-light; }
+
+  &__body {
+    font-family: $font-sans;
+    font-size: 19px;
+    line-height: 1.5;
+    color: rgba(245, 241, 235, .72);
+    max-width: 520px;
+    margin-top: 56px;
+    margin-bottom: 40px;
+    letter-spacing: -.005em;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  &__ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  &__footer-strip {
+    margin-top: auto;
+    padding-top: 80px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    font-family: $font-mono;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(245, 241, 235, .5);
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+
+    &-left {
+      display: flex;
+      gap: 32px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-line {
+      width: 28px;
+      height: 1px;
+      background: rgba(245, 241, 235, .4);
+    }
+  }
+}
+
+// ─── Arrow buttons ────────────────────────────────────────────────────────────
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 22px;
+  border-radius: 999px;
+  font-family: $font-sans;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: -.005em;
+  transition: transform .25s $ease-out-quart, box-shadow .25s;
+  border: none;
+  cursor: none;
+
+  &:hover { transform: translateY(-2px); }
+
+  &--primary {
+    background: $coral;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    &:hover { box-shadow: 0 12px 32px rgba($coral, .4); }
+  }
+
+  &--dark {
+    background: rgba(245, 241, 235, .08);
+    color: $paper;
+    border: 1px solid $line-dark;
+
+    &:hover { background: rgba(245, 241, 235, .12); }
+  }
+
+  &--ghost {
+    background: rgba(14, 13, 11, .04);
+    color: $ink;
+    border: 1px solid $line;
+
+    &:hover { background: rgba(14, 13, 11, .08); }
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+
+    .arrow-btn--primary &   { background: rgba(255, 255, 255, .18); color: #fff; }
+    .arrow-btn--dark &      { background: rgba($coral, .18); color: $coral; }
+    .arrow-btn--ghost &     { background: rgba($coral, .12); color: $coral; }
+  }
+}

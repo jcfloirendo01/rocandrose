@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roc &amp; Rose Digital — Strategic Digital Partner · Melbourne</title>
+  <meta name="description" content="Roc &amp; Rose is a Melbourne-built digital agency turning ambitious brands into category leaders through SEO, Paid Ads, Social, Web Design, and more." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-outer" style="position:fixed;pointer-events:none;z-index:10000;mix-blend-mode:difference;"></div>
+<div class="cursor-inner" style="position:fixed;pointer-events:none;z-index:10001;mix-blend-mode:difference;"></div>
+
+<!-- Barba.js transition overlay (injected by barba-transitions.js) -->
+
+<!-- Sticky nav (outside barba container so it persists) -->
+<nav class="nav nav--sticky" aria-label="Site navigation" style="position:fixed;">
+  <a class="nav__logo" href="index.html">
+    <span class="nav__logo-mark" aria-hidden="true">R</span>
+    <span class="nav__logo-name">Roc &amp; Rose</span>
+  </a>
+  <div class="nav__links hide-mobile">
+    <a class="nav__link" href="services.html">Services</a>
+    <a class="nav__link" href="work.html">Work</a>
+    <a class="nav__link" href="index.html#process">Process</a>
+    <a class="nav__link" href="index.html#studio">Studio</a>
+    <a class="nav__link" href="contact.html">Contact</a>
+    <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+  </div>
+  <button class="nav__hamburger show-mobile" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <button class="mobile-menu__close" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <ul class="mobile-menu__links">
+    <li><a class="mobile-menu__link" href="services.html">Services</a></li>
+    <li><a class="mobile-menu__link" href="work.html">Work</a></li>
+    <li><a class="mobile-menu__link" href="index.html#process">Process</a></li>
+    <li><a class="mobile-menu__link" href="index.html#studio">Studio</a></li>
+    <li><a class="mobile-menu__link" href="contact.html"><em>Contact</em></a></li>
+  </ul>
+  <p class="mobile-menu__footer">Roc &amp; Rose · Fitzroy · Melbourne · Est. 2017</p>
+</div>
+
+<!-- ── Barba wrapper ──────────────────────────────────────────────────────── -->
+<div data-barba="wrapper">
+<main data-barba="container" data-barba-namespace="home">
+
+  <!-- ── 01 · Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Hero">
+    <canvas
+      class="hero__canvas"
+      data-wave-hero
+      aria-hidden="true"
+    ></canvas>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <!-- Persistent nav placeholder (absolute) -->
+    <header class="nav" style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;" aria-label="Primary navigation">
+      <a class="nav__logo" href="index.html">
+        <span class="nav__logo-mark" aria-hidden="true">R</span>
+        <span class="nav__logo-name">Roc &amp; Rose</span>
+      </a>
+      <div class="nav__links hide-mobile">
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="work.html">Work</a>
+        <a class="nav__link" href="#process">Process</a>
+        <a class="nav__link" href="#studio">Studio</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+        <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+      </div>
+      <button class="nav__hamburger show-mobile" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="eyebrow eyebrow--dark">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Independent · Melbourne · Est. 2017
+        </span>
+      </div>
+
+      <h1 class="hero__headline">
+        Strategy that
+        <span class="hero__coral">
+          <span class="char" style="display:inline-block;">m</span><span class="char" style="display:inline-block;">o</span><span class="char" style="display:inline-block;">v</span><span class="char" style="display:inline-block;">e</span><span class="char" style="display:inline-block;">s</span>
+        </span>.
+        <br />
+        Craft that
+        <span class="hero__blue">
+          <span class="char" style="display:inline-block;">c</span><span class="char" style="display:inline-block;">o</span><span class="char" style="display:inline-block;">m</span><span class="char" style="display:inline-block;">p</span><span class="char" style="display:inline-block;">o</span><span class="char" style="display:inline-block;">u</span><span class="char" style="display:inline-block;">n</span><span class="char" style="display:inline-block;">d</span><span class="char" style="display:inline-block;">s</span>
+        </span>.
+      </h1>
+
+      <p class="hero__body">
+        Roc &amp; Rose is a Melbourne‑built digital agency turning ambitious
+        brands into category leaders — through the kind of marketing that
+        earns attention and keeps it.
+      </p>
+
+      <div class="hero__ctas">
+        <a class="arrow-btn arrow-btn--primary" href="contact.html" data-magnetic>
+          Start a project
+          <span class="arrow-btn__arrow">→</span>
+        </a>
+        <a class="arrow-btn arrow-btn--dark" href="work.html" data-magnetic>
+          See our work
+          <span class="arrow-btn__arrow">→</span>
+        </a>
+      </div>
+
+      <div class="hero__footer-strip" aria-hidden="true">
+        <div class="hero__footer-strip-left">
+          <span>—37.8136° S</span>
+          <span>144.9631° E</span>
+          <span>Fitzroy / Naarm</span>
+        </div>
+        <div class="hero__footer-strip-right">
+          <span>Scroll</span>
+          <span class="hero__footer-strip-line"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 02 · Client logos ───────────────────────────────────────────────────── -->
+  <section class="logos" aria-label="Clients">
+    <div class="logos__eyebrow">
+      <span class="eyebrow">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        ★ Trusted by 60+ brands across AU &amp; APAC
+      </span>
+    </div>
+    <div style="position:relative;overflow:hidden;" aria-hidden="true">
+      <div class="logos__track">
+        <span class="logos__item logos__item--bold">NORDLAKE</span>
+        <span class="logos__item logos__item--serif">Halberd &amp; Co.</span>
+        <span class="logos__item">Beanvelope</span>
+        <span class="logos__item logos__item--serif">Foster/Foster</span>
+        <span class="logos__item">Linework</span>
+        <span class="logos__item">Ovum Studios</span>
+        <span class="logos__item logos__item--serif">Twelve—Six</span>
+        <span class="logos__item">Carbon Plate</span>
+        <span class="logos__item">Mossfield</span>
+        <span class="logos__item logos__item--bold">Quanta</span>
+        <span class="logos__item">Saltbox</span>
+        <span class="logos__item">Verdance</span>
+        <!-- duplicate for seamless loop -->
+        <span class="logos__item logos__item--bold">NORDLAKE</span>
+        <span class="logos__item logos__item--serif">Halberd &amp; Co.</span>
+        <span class="logos__item">Beanvelope</span>
+        <span class="logos__item logos__item--serif">Foster/Foster</span>
+        <span class="logos__item">Linework</span>
+        <span class="logos__item">Ovum Studios</span>
+        <span class="logos__item logos__item--serif">Twelve—Six</span>
+        <span class="logos__item">Carbon Plate</span>
+        <span class="logos__item">Mossfield</span>
+        <span class="logos__item logos__item--bold">Quanta</span>
+        <span class="logos__item">Saltbox</span>
+        <span class="logos__item">Verdance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 · Services ──────────────────────────────────────────────────────── -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="services__header">
+        <div>
+          <span class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            02 — Capabilities
+          </span>
+          <h2 class="services__headline" id="services-heading">
+            Nine practices,<br />
+            <em>one</em> studio.
+          </h2>
+        </div>
+        <p class="services__sub">
+          We don't subcontract our work to freelancers in another timezone.
+          Every campaign that leaves this studio is built by the same people
+          who pitched it to you.
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service-card service-card--highlight">
+          <div class="service-card__header">
+            <span class="service-card__num">01</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Search &amp; SEO</h3>
+          <p class="service-card__desc">Technical foundations, content velocity, and topical authority — built for the algorithms that exist now and the ones that arrive next.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Tech audits</span>
+            <span class="service-card__tag">Content</span>
+            <span class="service-card__tag">Local SEO</span>
+            <span class="service-card__tag">Schema</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__header">
+            <span class="service-card__num">02</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Paid Media</h3>
+          <p class="service-card__desc">Google, Meta, TikTok, LinkedIn. We treat ad accounts as living instruments — daily tuning, weekly rebalancing, monthly retooling.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Google Ads</span>
+            <span class="service-card__tag">Meta</span>
+            <span class="service-card__tag">TikTok</span>
+            <span class="service-card__tag">Programmatic</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__header">
+            <span class="service-card__num">03</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Social &amp; Content</h3>
+          <p class="service-card__desc">Editorial calendars that don't feel like calendars. We script, shoot, and publish in‑house, in our Fitzroy studio.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Strategy</span>
+            <span class="service-card__tag">Production</span>
+            <span class="service-card__tag">Community</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__header">
+            <span class="service-card__num">04</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Conversion Optimization</h3>
+          <p class="service-card__desc">A/B everything that matters, ignore everything that doesn't. We turn traffic into revenue with surgical experimentation.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">CRO</span>
+            <span class="service-card__tag">Analytics</span>
+            <span class="service-card__tag">UX research</span>
+          </div>
+        </article>
+
+        <article class="service-card service-card--highlight">
+          <div class="service-card__header">
+            <span class="service-card__num">05</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Web Design &amp; Build</h3>
+          <p class="service-card__desc">Sites that load fast, rank well, and feel like the brand. Headless CMS, edge‑rendered, designed for the people who use them.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Webflow</span>
+            <span class="service-card__tag">Next.js</span>
+            <span class="service-card__tag">Shopify+</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__header">
+            <span class="service-card__num">06</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Brand &amp; Identity</h3>
+          <p class="service-card__desc">Logos, systems, voice, and the connective tissue that holds it all together. We build brands that are recognizable in a glance.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Identity</span>
+            <span class="service-card__tag">Voice</span>
+            <span class="service-card__tag">Guidelines</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__header">
+            <span class="service-card__num">07</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Email &amp; Lifecycle</h3>
+          <p class="service-card__desc">Welcome flows, win‑backs, browse abandons. Klaviyo, HubSpot, and bespoke ESPs for serious senders.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Klaviyo</span>
+            <span class="service-card__tag">HubSpot</span>
+            <span class="service-card__tag">CDP</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__header">
+            <span class="service-card__num">08</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Video &amp; Motion</h3>
+          <p class="service-card__desc">In‑studio production for ads, social, and brand films. Director‑led, performance‑measured, finished in‑house.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Direction</span>
+            <span class="service-card__tag">Edit</span>
+            <span class="service-card__tag">Motion</span>
+          </div>
+        </article>
+
+        <article class="service-card service-card--highlight">
+          <div class="service-card__header">
+            <span class="service-card__num">09</span>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
+          </div>
+          <h3 class="service-card__title">Strategy &amp; Insights</h3>
+          <p class="service-card__desc">Brand positioning, customer research, GTM planning. The thinking that comes before the doing.</p>
+          <div class="service-card__tags">
+            <span class="service-card__tag">Positioning</span>
+            <span class="service-card__tag">Research</span>
+            <span class="service-card__tag">Planning</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 · Stats ─────────────────────────────────────────────────────────── -->
+  <section class="stats" aria-labelledby="stats-heading">
+    <div class="stats__wash" aria-hidden="true"></div>
+    <div class="container">
+      <span class="eyebrow eyebrow--dark">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        03 — Outcomes
+      </span>
+      <h2 class="stats__headline" id="stats-heading">
+        Numbers our clients renew their retainers over.
+      </h2>
+      <div class="stats__grid">
+        <div class="stats__cell">
+          <div class="stats__value" style="color:#E75D4A;" data-counter="4.8×" aria-label="4.8 times return on ad spend">4.8×</div>
+          <p class="stats__label">Average return on ad spend across DTC retainers, FY25</p>
+        </div>
+        <div class="stats__cell">
+          <div class="stats__value" style="color:#7BB6E0;" data-counter="+312%">+312%</div>
+          <p class="stats__label">YoY organic traffic for Nordlake after 9 months</p>
+        </div>
+        <div class="stats__cell">
+          <div class="stats__value" style="color:#E75D4A;" data-counter="$84M">$84M</div>
+          <p class="stats__label">Tracked revenue attributed to campaigns shipped in 2025</p>
+        </div>
+        <div class="stats__cell">
+          <div class="stats__value" style="color:#7BB6E0;" data-counter="92%">92%</div>
+          <p class="stats__label">Client retention rate over the last three years</p>
+        </div>
+      </div>
+      <p class="stats__note">↳ Aggregated across 47 active accounts. Methodology available on request.</p>
+    </div>
+  </section>
+
+  <!-- ── 05 · Case studies ──────────────────────────────────────────────────── -->
+  <section class="cases" id="work" aria-labelledby="cases-heading">
+    <div class="container">
+      <div class="cases__header">
+        <div>
+          <span class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            04 — Selected Work
+          </span>
+          <h2 class="cases__headline" id="cases-heading">
+            Work we'd happily<br />
+            <em>frame</em> on the wall.
+          </h2>
+        </div>
+        <a class="cases__all-link" href="work.html">All case studies →</a>
+      </div>
+
+      <div class="cases__list">
+
+        <!-- Case 01 -->
+        <a class="case-card" href="work.html" aria-label="Nordlake case study">
+          <div class="case-card__visual" style="background:linear-gradient(135deg,#E75D4A,#367FB6);">
+            <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 20% 30%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
+            <div class="case-card__visual-lines" style="background:repeating-linear-gradient(60deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
+            <span class="case-card__visual-tag">eCom · Skincare</span>
+            <span class="case-card__visual-counter" aria-hidden="true">01 / 04</span>
+          </div>
+          <div class="case-card__body">
+            <div>
+              <h3 class="case-card__title">
+                Nordlake
+                <span class="case-card__arrow" aria-hidden="true">↗</span>
+              </h3>
+              <p class="case-card__sub">A cold‑weather skincare brand from Brunswick — from launch to $11M ARR in 18 months.</p>
+            </div>
+            <div class="case-card__kpis">
+              <div>
+                <div class="case-card__kpi-value" style="color:#E75D4A;">+312%</div>
+                <div class="case-card__kpi-label">organic</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#E75D4A;">4.6×</div>
+                <div class="case-card__kpi-label">ROAS</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#E75D4A;">$11M</div>
+                <div class="case-card__kpi-label">ARR</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Case 02 -->
+        <a class="case-card case-card--reversed" href="work.html" aria-label="Halberd and Co case study">
+          <div class="case-card__visual" style="background:linear-gradient(135deg,#367FB6,#E75D4A);">
+            <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 40% 40%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 65% 75%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
+            <div class="case-card__visual-lines" style="background:repeating-linear-gradient(90deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
+            <span class="case-card__visual-tag">B2B · SaaS</span>
+            <span class="case-card__visual-counter" aria-hidden="true">02 / 04</span>
+          </div>
+          <div class="case-card__body">
+            <div>
+              <h3 class="case-card__title">
+                Halberd &amp; Co.
+                <span class="case-card__arrow" aria-hidden="true">↗</span>
+              </h3>
+              <p class="case-card__sub">Repositioned a legal‑tech platform around outcomes, not features. Pipeline doubled in two quarters.</p>
+            </div>
+            <div class="case-card__kpis">
+              <div>
+                <div class="case-card__kpi-value" style="color:#367FB6;">2.1×</div>
+                <div class="case-card__kpi-label">pipeline</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#367FB6;">−38%</div>
+                <div class="case-card__kpi-label">CAC</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#367FB6;">+58</div>
+                <div class="case-card__kpi-label">NPS</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Case 03 -->
+        <a class="case-card" href="work.html" aria-label="Beanvelope case study">
+          <div class="case-card__visual" style="background:linear-gradient(135deg,#E75D4A,#B85D45);">
+            <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 60% 20%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 20% 80%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
+            <div class="case-card__visual-lines" style="background:repeating-linear-gradient(120deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
+            <span class="case-card__visual-tag">Hospitality</span>
+            <span class="case-card__visual-counter" aria-hidden="true">03 / 04</span>
+          </div>
+          <div class="case-card__body">
+            <div>
+              <h3 class="case-card__title">
+                Beanvelope
+                <span class="case-card__arrow" aria-hidden="true">↗</span>
+              </h3>
+              <p class="case-card__sub">A specialty coffee roaster, rebuilt around a wholesale‑first growth model. Now in 240 cafés nationwide.</p>
+            </div>
+            <div class="case-card__kpis">
+              <div>
+                <div class="case-card__kpi-value" style="color:#E75D4A;">240</div>
+                <div class="case-card__kpi-label">wholesale</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#E75D4A;">+186%</div>
+                <div class="case-card__kpi-label">subscribers</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#E75D4A;">12</div>
+                <div class="case-card__kpi-label">cities</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Case 04 -->
+        <a class="case-card case-card--reversed" href="work.html" aria-label="Foster/Foster case study">
+          <div class="case-card__visual" style="background:linear-gradient(135deg,#367FB6,#1E4D7A);">
+            <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 30% 60%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
+            <div class="case-card__visual-lines" style="background:repeating-linear-gradient(150deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
+            <span class="case-card__visual-tag">Wellness</span>
+            <span class="case-card__visual-counter" aria-hidden="true">04 / 04</span>
+          </div>
+          <div class="case-card__body">
+            <div>
+              <h3 class="case-card__title">
+                Foster/Foster
+                <span class="case-card__arrow" aria-hidden="true">↗</span>
+              </h3>
+              <p class="case-card__sub">A practitioner network reframed as a category — from "find a therapist" to a movement people share.</p>
+            </div>
+            <div class="case-card__kpis">
+              <div>
+                <div class="case-card__kpi-value" style="color:#367FB6;">8×</div>
+                <div class="case-card__kpi-label">sign‑ups</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#367FB6;">+440K</div>
+                <div class="case-card__kpi-label">social</div>
+              </div>
+              <div>
+                <div class="case-card__kpi-value" style="color:#367FB6;">1.8s</div>
+                <div class="case-card__kpi-label">LCP</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 06 · Process ───────────────────────────────────────────────────────── -->
+  <section class="process" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="process__header">
+        <span class="eyebrow">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          05 — How we work
+        </span>
+        <h2 class="process__headline" id="process-heading">
+          A cadence built for
+          <em>compound</em>
+          outcomes — not one‑off launches.
+        </h2>
+      </div>
+      <div class="process__steps">
+        <div class="process__step">
+          <div class="process__step-dot process__step-dot--active" aria-hidden="true"></div>
+          <div class="process__step-meta">
+            <span>01</span>
+            <span>2 wks</span>
+          </div>
+          <h3 class="process__step-title">Discover</h3>
+          <p class="process__step-desc">Stakeholder workshops, audits, and customer interviews. We earn the right to recommend before we recommend anything.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-dot" aria-hidden="true"></div>
+          <div class="process__step-meta">
+            <span>02</span>
+            <span>3 wks</span>
+          </div>
+          <h3 class="process__step-title">Define</h3>
+          <p class="process__step-desc">Positioning, KPIs, channel strategy. A signed playbook everyone — including your CFO — actually agrees on.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-dot" aria-hidden="true"></div>
+          <div class="process__step-meta">
+            <span>03</span>
+            <span>6 wks</span>
+          </div>
+          <h3 class="process__step-title">Design &amp; Ship</h3>
+          <p class="process__step-desc">Concept, build, and launch in tight sprints. You see work weekly. You approve once. We move.</p>
+        </div>
+        <div class="process__step">
+          <div class="process__step-dot" aria-hidden="true"></div>
+          <div class="process__step-meta">
+            <span>04</span>
+            <span>Ongoing</span>
+          </div>
+          <h3 class="process__step-title">Compound</h3>
+          <p class="process__step-desc">Weekly scorecards, monthly reviews, quarterly bets. The good stuff happens in the years, not the launches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 07 · Testimonial quote ─────────────────────────────────────────────── -->
+  <section class="quote" aria-labelledby="quote-heading">
+    <div class="quote__overlay" aria-hidden="true"></div>
+    <div class="container">
+      <span class="eyebrow eyebrow--dark" id="quote-heading">
+        ★ Testimonial — Halberd &amp; Co.
+      </span>
+      <blockquote class="quote__text">
+        "We've worked with three of the biggest agencies in APAC. Roc &amp; Rose
+        shipped more measurable revenue in their first quarter than the
+        previous incumbent did in two years."
+      </blockquote>
+      <div class="quote__attribution">
+        <div class="quote__avatar" aria-hidden="true">JH</div>
+        <div>
+          <div class="quote__name">Jess Halberd</div>
+          <div class="quote__role">CMO, Halberd &amp; Co.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 08 · Pricing ───────────────────────────────────────────────────────── -->
+  <section class="pricing" aria-labelledby="pricing-heading">
+    <div class="container">
+      <div class="pricing__header">
+        <div>
+          <span class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            06 — Engagements
+          </span>
+          <h2 class="pricing__headline" id="pricing-heading">
+            Three ways<br />
+            to <em>work together</em>.
+          </h2>
+        </div>
+        <p class="pricing__sub">
+          We don't believe in lock‑in. Every engagement starts with a 30‑day
+          opt‑out and ends only when you tell us to. No timesheets, no
+          change orders, no surprises on the invoice.
+        </p>
+      </div>
+
+      <div class="pricing__grid">
+
+        <div class="price-card">
+          <div class="price-card__tier">Sprint</div>
+          <div class="price-card__price">$24K</div>
+          <div class="price-card__period">/ 6‑week engagement</div>
+          <p class="price-card__desc">A focused, fixed‑scope engagement. Best for product launches, rebrands, or a single channel hypothesis.</p>
+          <hr class="price-card__divider" />
+          <ul class="price-card__features">
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Strategy &amp; audit</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> One channel build (paid, SEO, or web)</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Launch + 30 days of optimization</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Final playbook</li>
+          </ul>
+          <a class="price-card__cta" href="contact.html">Get a proposal →</a>
+        </div>
+
+        <div class="price-card price-card--featured">
+          <div class="price-card__glow" aria-hidden="true"></div>
+          <div class="price-card__badge" aria-label="Most popular">Most chosen</div>
+          <div class="price-card__tier">Retainer</div>
+          <div class="price-card__price">$18K</div>
+          <div class="price-card__period">/ month, 6 mo min.</div>
+          <p class="price-card__desc">Our flagship. A pod of 4–6 specialists owns your growth function across paid, organic, lifecycle, and CRO.</p>
+          <hr class="price-card__divider" />
+          <ul class="price-card__features">
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Dedicated 5‑person pod</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Multi‑channel execution</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Weekly scorecards, monthly QBRs</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Quarterly strategy resets</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Slack + Linear access</li>
+          </ul>
+          <a class="price-card__cta" href="contact.html">Book an intro call →</a>
+        </div>
+
+        <div class="price-card">
+          <div class="price-card__tier">Partner</div>
+          <div class="price-card__price" style="font-size:48px;">Custom</div>
+          <div class="price-card__period">12 mo+, equity optional</div>
+          <p class="price-card__desc">For founders who want a long‑run growth partner. We co‑build the function, sometimes for cash, sometimes for a sliver of the cap table.</p>
+          <hr class="price-card__divider" />
+          <ul class="price-card__features">
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Embedded leadership</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Multi‑pod structure</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Brand + growth + product</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Fractional CMO option</li>
+            <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Aligned outcomes</li>
+          </ul>
+          <a class="price-card__cta" href="contact.html">Get a proposal →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 09 · Studio ────────────────────────────────────────────────────────── -->
+  <section class="studio" id="studio" aria-labelledby="studio-heading">
+    <div class="container">
+      <div class="studio__grid">
+        <div>
+          <span class="eyebrow eyebrow--dark">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            07 — The Studio
+          </span>
+          <h2 class="studio__headline" id="studio-heading">
+            Built in<br />
+            <em class="studio__headline-coral">Fitzroy</em>.<br />
+            Made for<br />
+            <em class="studio__headline-blue">everywhere</em>.
+          </h2>
+          <p class="studio__body">
+            We work out of a converted print warehouse on Gertrude Street.
+            The good kind of Melbourne — where the coffee is too strong and
+            the rent makes you negotiate harder. Drop in any Thursday for
+            an espresso and a whiteboard session.
+          </p>
+          <div class="studio__details">
+            <div>
+              <div class="studio__detail-label">Studio</div>
+              <div class="studio__detail-value">Level 2, 184 Gertrude St<br />Fitzroy VIC 3065</div>
+            </div>
+            <div>
+              <div class="studio__detail-label">Hours</div>
+              <div class="studio__detail-value">Mon–Thu · 8:30–6<br />Fri · by appointment</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faux map -->
+        <div class="studio__map" aria-hidden="true">
+          <!-- Grid -->
+          <svg class="studio__map-grid" width="100%" height="100%">
+            <defs>
+              <pattern id="mapgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F5F1EB" stroke-width=".5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#mapgrid)" />
+          </svg>
+          <!-- Streets -->
+          <svg class="studio__map-streets" width="100%" height="100%">
+            <path d="M 0 60% Q 30% 55%, 50% 50% T 100% 40%" stroke="rgba(245,241,235,.25)" fill="none" stroke-width="2" />
+            <path d="M 30% 0 L 50% 100%" stroke="rgba(245,241,235,.15)" fill="none" stroke-width="1" />
+            <path d="M 0 30% L 100% 25%" stroke="rgba(245,241,235,.15)" fill="none" stroke-width="1" />
+            <path d="M 70% 0 L 65% 100%" stroke="rgba(245,241,235,.15)" fill="none" stroke-width="1" />
+          </svg>
+          <!-- Pin -->
+          <div class="studio__map-pin">
+            <div class="studio__map-pulse">
+              <div class="studio__map-pulse-ring"></div>
+              <div class="studio__map-pulse-dot"></div>
+            </div>
+            <div class="studio__map-label">R&amp;R Studio · Fitzroy</div>
+          </div>
+          <span class="studio__map-coords-top">Naarm / Melbourne</span>
+          <span class="studio__map-coords-bot">−37.8011 · 144.9787</span>
+        </div>
+      </div>
+
+      <!-- Melbourne facts strip -->
+      <div class="studio__melb-strip" aria-label="Studio facts">
+        <span class="studio__melb-fact">
+          <span class="studio__melb-fact-icon" aria-hidden="true">☕</span>
+          Coffee answered for · 7 brewers within 2 min
+        </span>
+        <span class="studio__melb-fact">
+          <span class="studio__melb-fact-icon" aria-hidden="true">🚋</span>
+          Tram 86 stops outside our door
+        </span>
+        <span class="studio__melb-fact">
+          <span class="studio__melb-fact-icon" aria-hidden="true">🏛</span>
+          Established 2017, B‑Corp pending
+        </span>
+        <span class="studio__melb-fact">
+          <span class="studio__melb-fact-icon" aria-hidden="true">🌏</span>
+          Clients across AU, NZ, SG, JP
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 10 · FAQ ───────────────────────────────────────────────────────────── -->
+  <section class="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="faq__header">
+        <span class="eyebrow">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          08 — Frequently asked
+        </span>
+        <h2 class="faq__headline" id="faq-heading">
+          The questions everyone asks<br />
+          before <em>signing</em>.
+        </h2>
+      </div>
+
+      <div class="faq__list" role="list">
+
+        <div class="faq__item" role="listitem">
+          <button class="faq__trigger" aria-expanded="false">
+            <span class="faq__question">How quickly can we start?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">New retainers usually kick off within 2–3 weeks of signing. We don't take on more than two new clients per month — it's the only way we keep the work tight.</div>
+          </div>
+        </div>
+
+        <div class="faq__item" role="listitem">
+          <button class="faq__trigger" aria-expanded="false">
+            <span class="faq__question">Do you work with brands outside Melbourne?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">About 60% of our roster is interstate or international. We run async‑friendly schedules, and there's always one of us awake when you are.</div>
+          </div>
+        </div>
+
+        <div class="faq__item" role="listitem">
+          <button class="faq__trigger" aria-expanded="false">
+            <span class="faq__question">What's your minimum engagement?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Sprints start at 6 weeks. Retainers have a 6‑month minimum so the strategy actually has time to compound. Partner engagements are 12 months and up.</div>
+          </div>
+        </div>
+
+        <div class="faq__item" role="listitem">
+          <button class="faq__trigger" aria-expanded="false">
+            <span class="faq__question">Do you white‑label or work with other agencies?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Occasionally — usually as a strategy or technical partner, never as a hidden contractor. We're proud of our work and we want our name on it.</div>
+          </div>
+        </div>
+
+        <div class="faq__item" role="listitem">
+          <button class="faq__trigger" aria-expanded="false">
+            <span class="faq__question">Who actually does the work?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Our team. There are 18 of us in the studio and we don't use offshore contractors. The same strategist who pitches you also runs your account.</div>
+          </div>
+        </div>
+
+        <div class="faq__item" role="listitem">
+          <button class="faq__trigger" aria-expanded="false">
+            <span class="faq__question">Can we see references?</span>
+            <span class="faq__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Yes — we'll connect you with current clients in your category before you sign. We'd rather you pass on us than start a partnership half‑convinced.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 11 · CTA + Footer ──────────────────────────────────────────────────── -->
+  <section class="cta-footer" aria-labelledby="cta-heading">
+    <div class="cta-footer__wash" aria-hidden="true"></div>
+    <div class="container">
+      <span class="eyebrow eyebrow--dark">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        09 — Let's talk
+      </span>
+      <h2 class="cta-footer__headline" id="cta-heading">
+        Got a brief?<br />
+        We've got<br />
+        <em>opinions</em>.
+      </h2>
+      <div class="cta-footer__ctas">
+        <a class="arrow-btn arrow-btn--primary" href="contact.html" data-magnetic>
+          Start a project
+          <span class="arrow-btn__arrow">→</span>
+        </a>
+        <a class="arrow-btn arrow-btn--dark" href="mailto:hello@rocandrose.studio" data-magnetic>
+          hello@rocandrose.studio
+          <span class="arrow-btn__arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer class="cta-footer__footer" aria-label="Site footer">
+        <div>
+          <div class="cta-footer__brand">
+            <span class="cta-footer__brand-mark" aria-hidden="true">R</span>
+            <span class="cta-footer__brand-name">Roc &amp; Rose Digital</span>
+          </div>
+          <p class="cta-footer__tagline">
+            An independent digital marketing studio. Built in Naarm,
+            Melbourne. Acknowledging the Wurundjeri Woi‑wurrung people as
+            the traditional custodians of the land we work on.
+          </p>
+        </div>
+        <nav aria-label="Footer studio links">
+          <div class="cta-footer__col-head">Studio</div>
+          <a class="cta-footer__col-link" href="services.html">Services</a>
+          <a class="cta-footer__col-link" href="work.html">Work</a>
+          <a class="cta-footer__col-link" href="index.html#process">Process</a>
+          <a class="cta-footer__col-link" href="index.html#studio">Studio</a>
+        </nav>
+        <nav aria-label="Footer social links">
+          <div class="cta-footer__col-head">Connect</div>
+          <a class="cta-footer__col-link" href="mailto:hello@rocandrose.studio">Email</a>
+          <a class="cta-footer__col-link" href="#">Instagram</a>
+          <a class="cta-footer__col-link" href="#">LinkedIn</a>
+          <a class="cta-footer__col-link" href="#">Are.na</a>
+        </nav>
+        <nav aria-label="Footer reading links">
+          <div class="cta-footer__col-head">Read</div>
+          <a class="cta-footer__col-link" href="#">Field Notes</a>
+          <a class="cta-footer__col-link" href="#">Annual Report</a>
+          <a class="cta-footer__col-link" href="#">Case Library</a>
+        </nav>
+        <nav aria-label="Footer legal links">
+          <div class="cta-footer__col-head">Legal</div>
+          <a class="cta-footer__col-link" href="#">Privacy</a>
+          <a class="cta-footer__col-link" href="#">Terms</a>
+          <a class="cta-footer__col-link" href="#">Acknowledgement</a>
+        </nav>
+      </footer>
+
+      <div class="cta-footer__bottom">
+        <span>© 2026 Roc &amp; Rose Digital · ABN 47 218 991 044</span>
+        <span>Made on Wurundjeri Country</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div><!-- end barba-wrapper -->
+
+<!-- ── Scripts (order matters) ──────────────────────────────────────────────── -->
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- Lenis smooth scroll -->
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<!-- Barba.js -->
+<script src="https://cdn.jsdelivr.net/npm/@barba/core/dist/barba.umd.min.js"></script>
+<!-- Site scripts -->
+<script src="js/silk-hero.js"></script>
+<script src="js/wave-hero.js"></script>
+<script src="js/lenis-init.js"></script>
+<script src="js/gsap-animations.js"></script>
+<script src="js/barba-transitions.js"></script>
+
+</body>
+</html>

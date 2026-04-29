@@ -1,0 +1,199 @@
+@use 'tokens' as *;
+@use 'sass:color';
+
+// ─── Reset ────────────────────────────────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html {
+  // scroll-behavior handled by Lenis — keep smooth: auto here
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-sans;
+  background: $paper;
+  color: $ink;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::selection {
+  background: $coral;
+  color: #fff;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+button { cursor: none; }
+
+// ─── CSS Custom Properties ────────────────────────────────────────────────────
+:root {
+  --serif:   #{$font-serif};
+  --sans:    #{$font-sans};
+  --mono:    #{$font-mono};
+  --coral:   #{$coral};
+  --blue:    #{$blue};
+  --ink:     #{$ink};
+  --paper:   #{$paper};
+  --gutter:  40px;
+
+  @media (max-width: #{$bp-tablet}) { --gutter: 24px; }
+  @media (max-width: #{$bp-mobile}) { --gutter: 20px; }
+}
+
+// ─── Container ────────────────────────────────────────────────────────────────
+.container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+// ─── Eyebrow ──────────────────────────────────────────────────────────────────
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-mono;
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(14, 13, 11, .55);
+
+  &--dark { color: rgba(245, 241, 235, .65); }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: $coral;
+    display: inline-block;
+    box-shadow: 0 0 10px $coral;
+    flex-shrink: 0;
+  }
+}
+
+// ─── Keyframes ────────────────────────────────────────────────────────────────
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: .7; }
+  50%       { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10%       { transform: translate(-2%, -3%); }
+  20%       { transform: translate(3%, 2%); }
+  30%       { transform: translate(-1%, 4%); }
+  40%       { transform: translate(2%, -2%); }
+  50%       { transform: translate(-3%, 1%); }
+  60%       { transform: translate(4%, 3%); }
+  70%       { transform: translate(-2%, -1%); }
+  80%       { transform: translate(1%, -4%); }
+  90%       { transform: translate(3%, 2%); }
+}
+
+// ─── Barba shutter transition ─────────────────────────────────────────────────
+// N horizontal slats that close like a venetian blind between page navigations.
+// Odd slats close from the left, even slats from the right — a "zipper" effect.
+.shutter {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+
+  &__slat {
+    flex: 1;
+    position: relative;
+    transform: scaleX(0);
+    will-change: transform;
+
+    // Odd slats: close from left
+    &:nth-child(odd)  { transform-origin: left center; }
+
+    // Even slats: close from right
+    &:nth-child(even) { transform-origin: right center; }
+
+    // Base fill — deep ink
+    background: $ink;
+
+    // Subtle accent strip at the bottom of each slat
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba($coral, .25);
+    }
+
+    &:last-child::after { display: none; }
+  }
+
+  // Logo mark shown while screen is covered
+  &__brand {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__brand-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__brand-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, $coral, $blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba($coral, .4);
+    flex-shrink: 0;
+  }
+
+  &__brand-name {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(24px, 3vw, 40px);
+    color: $paper;
+    letter-spacing: -.02em;
+  }
+}
+
+// ─── Responsive helpers ───────────────────────────────────────────────────────
+@media (max-width: #{$bp-tablet}) {
+  .hide-mobile { display: none !important; }
+}
+@media (min-width: #{$bp-tablet}) {
+  .show-mobile { display: none !important; }
+}
