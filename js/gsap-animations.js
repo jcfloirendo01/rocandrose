@@ -245,7 +245,7 @@
           trigger: el,
           start: 'top bottom',
           end: 'bottom top',
-          scrub: true,
+          scrub: 1.5, // smoothing delay in seconds — far cheaper than scrub: true
         },
       });
     });
@@ -422,14 +422,19 @@
     if (!nav) return;
 
     let lastY = 0;
+    let lastDir = 0; // only write to DOM when scroll direction changes
     ScrollTrigger.create({
       start: 'top -80',
       onUpdate(self) {
-        const y = self.scroll();
+        const y   = self.scroll();
+        const dir = y > lastY ? 1 : -1;
+
         if (y > 80) {
           nav.classList.add('is-visible');
-          if (y > lastY) nav.style.transform = 'translateY(-100%)';
-          else           nav.style.transform = 'translateY(0)';
+          if (dir !== lastDir) {
+            nav.style.transform = dir === 1 ? 'translateY(-100%)' : 'translateY(0)';
+            lastDir = dir;
+          }
         } else {
           nav.classList.remove('is-visible');
         }

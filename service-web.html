@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design &amp; Build — Roc &amp; Rose Digital</title>
+  <meta name="description" content="Headless CMS, edge-rendered, designed for performance. Sites that load fast, rank well, and feel like the brand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<div class="cursor-outer" style="position:fixed;pointer-events:none;z-index:10000;mix-blend-mode:difference;"></div>
+<div class="cursor-inner" style="position:fixed;pointer-events:none;z-index:10001;mix-blend-mode:difference;"></div>
+
+<nav class="nav nav--sticky" style="position:fixed;">
+  <a class="nav__logo" href="index.html"><span class="nav__logo-mark">R</span><span class="nav__logo-name">Roc &amp; Rose</span></a>
+  <div class="nav__links hide-mobile">
+    <a class="nav__link" href="services.html">Services</a><a class="nav__link" href="work.html">Work</a><a class="nav__link" href="index.html#process">Process</a><a class="nav__link" href="index.html#studio">Studio</a><a class="nav__link" href="contact.html">Contact</a><a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+  </div>
+  <button class="nav__hamburger show-mobile" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu">
+  <button class="mobile-menu__close" aria-label="Close menu"><span></span><span></span></button>
+  <ul class="mobile-menu__links">
+    <li><a class="mobile-menu__link" href="services.html">Services</a></li><li><a class="mobile-menu__link" href="work.html">Work</a></li><li><a class="mobile-menu__link" href="index.html#process">Process</a></li><li><a class="mobile-menu__link" href="index.html#studio">Studio</a></li><li><a class="mobile-menu__link" href="contact.html"><em>Contact</em></a></li>
+  </ul>
+  <p class="mobile-menu__footer">Roc &amp; Rose · Fitzroy · Melbourne · Est. 2017</p>
+</div>
+
+<div data-barba="wrapper">
+<main data-barba="container" data-barba-namespace="service" style="--svc-accent:#E75D4A;">
+
+  <nav class="service-subnav" aria-label="All services">
+    <div class="service-subnav__inner">
+      <a class="service-subnav__link" href="service-seo.html">01 · SEO</a>
+      <a class="service-subnav__link" href="service-paid-media.html">02 · Paid Media</a>
+      <a class="service-subnav__link" href="service-social.html">03 · Social</a>
+      <a class="service-subnav__link" href="service-cro.html">04 · CRO</a>
+      <a class="service-subnav__link is-active" href="service-web.html">05 · Web</a>
+      <a class="service-subnav__link" href="service-brand.html">06 · Brand</a>
+      <a class="service-subnav__link" href="service-email.html">07 · Email</a>
+      <a class="service-subnav__link" href="service-video.html">08 · Video</a>
+      <a class="service-subnav__link" href="service-strategy.html">09 · Strategy</a>
+    </div>
+  </nav>
+
+  <section class="svc-hero" aria-label="Web Design &amp; Build">
+    <div class="svc-hero__scrim" aria-hidden="true"></div>
+    <div class="svc-hero__content">
+      <p class="svc-hero__num">Practice 05 — Web Design &amp; Build</p>
+      <h1 class="svc-hero__headline">Sites that load fast<br /><em>and feel right.</em></h1>
+      <p class="svc-hero__lede">Headless CMS, edge-rendered, designed for the people who use them. We design and engineer in the same room — the result is sites you can actually update.</p>
+      <div class="svc-hero__stats">
+        <div><span class="svc-hero__stat-val"><span data-count="1.8" data-suffix="s" data-decimals="1">0s</span></span><span class="svc-hero__stat-label">LCP achieved</span></div>
+        <div><span class="svc-hero__stat-val"><span data-count="99">0</span></span><span class="svc-hero__stat-label">Lighthouse score</span></div>
+        <div><span class="svc-hero__stat-val"><span data-count="5">0</span></span><span class="svc-hero__stat-label">Day avg. launch time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-overview">
+    <div class="svc-overview__inner">
+      <div class="svc-overview__left">
+        <p class="svc-overview__eyebrow">The Challenge</p>
+        <h2 class="svc-overview__headline">Most agency websites look great in Figma. <em>They load slowly in production.</em></h2>
+        <p class="svc-overview__body">Design and engineering treated as separate disciplines means beautiful sites that crawl, CMS builds that nobody can use, and launch dates that slip. We put designers and engineers in the same room from day one — and the output is sites that perform commercially, not just visually.</p>
+      </div>
+      <div class="svc-overview__right">
+        <div class="svc-overview__principles">
+          <div class="svc-overview__principle">
+            <div class="svc-overview__principle-num">01</div>
+            <h3 class="svc-overview__principle-title">Performance as design</h3>
+            <p class="svc-overview__principle-body">Speed is a design decision, not an engineering afterthought. We design for Core Web Vitals from the first wireframe — not the last QA sprint.</p>
+          </div>
+          <div class="svc-overview__principle">
+            <div class="svc-overview__principle-num">02</div>
+            <h3 class="svc-overview__principle-title">Design and engineering together</h3>
+            <p class="svc-overview__principle-body">No brief-telephone between a design agency and a dev shop. One team, one brief, one delivery — with no one pointing fingers at the other discipline when launch day arrives.</p>
+          </div>
+          <div class="svc-overview__principle">
+            <div class="svc-overview__principle-num">03</div>
+            <h3 class="svc-overview__principle-title">Built to be maintained</h3>
+            <p class="svc-overview__principle-body">We build sites your team can actually update without filing a ticket. CMS systems designed for editors, not developers — because the best site is one that gets used.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-includes">
+    <div class="svc-includes__inner">
+      <p class="svc-includes__eyebrow">What's Included</p>
+      <h2 class="svc-includes__headline">Every stack. <em>One team.</em></h2>
+      <div class="svc-includes__grid">
+        <div class="svc-includes__item"><div class="svc-includes__item-num">01</div><h3 class="svc-includes__item-title">Webflow &amp; Framer</h3><p class="svc-includes__item-desc">Marketing sites and landing pages built for teams who need to ship and update fast — without waiting on a developer for every copy change.</p></div>
+        <div class="svc-includes__item"><div class="svc-includes__item-num">02</div><h3 class="svc-includes__item-title">Next.js &amp; React</h3><p class="svc-includes__item-desc">Edge-deployed, ISR-optimised web applications for brands that need performance at scale. Built on the App Router, tested for real users — not synthetic benchmarks.</p></div>
+        <div class="svc-includes__item"><div class="svc-includes__item-num">03</div><h3 class="svc-includes__item-title">Shopify Plus</h3><p class="svc-includes__item-desc">Custom theme development, headless builds, checkout extension, and metafield architecture for DTC brands doing serious volume on Shopify.</p></div>
+        <div class="svc-includes__item"><div class="svc-includes__item-num">04</div><h3 class="svc-includes__item-title">Sanity &amp; Contentful</h3><p class="svc-includes__item-desc">Headless CMS builds with custom studio schemas, live preview, and structured content architecture that scales with the brand.</p></div>
+        <div class="svc-includes__item"><div class="svc-includes__item-num">05</div><h3 class="svc-includes__item-title">Design Systems</h3><p class="svc-includes__item-desc">Component libraries and token-based design systems in Figma and code — so every new page looks like it belongs to the same brand.</p></div>
+        <div class="svc-includes__item"><div class="svc-includes__item-num">06</div><h3 class="svc-includes__item-title">Performance Engineering</h3><p class="svc-includes__item-desc">Core Web Vitals remediation, image optimisation pipelines, edge caching strategy, and third-party script audits for sites that need to get faster, fast.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-process">
+    <div class="svc-process__inner">
+      <p class="svc-process__eyebrow">How We Work</p>
+      <h2 class="svc-process__headline">From brief <em>to launch in weeks.</em></h2>
+      <div class="svc-process__steps">
+        <div class="svc-process__step"><div class="svc-process__step-num">Phase 01</div><div class="svc-process__step-bar"></div><h3 class="svc-process__step-title">Discover</h3><p class="svc-process__step-body">Stakeholder interviews, analytics review, user research, and competitive benchmarking. We learn what the site needs to DO before we decide what it looks like.</p></div>
+        <div class="svc-process__step"><div class="svc-process__step-num">Phase 02</div><div class="svc-process__step-bar"></div><h3 class="svc-process__step-title">Design</h3><p class="svc-process__step-body">Wireframes, component design, and prototypes — with performance considerations baked in. One round of structured feedback, then we move to build.</p></div>
+        <div class="svc-process__step"><div class="svc-process__step-num">Phase 03</div><div class="svc-process__step-bar"></div><h3 class="svc-process__step-title">Build</h3><p class="svc-process__step-body">Engineers and designers in the same Slack channel — no handoff document, no lost context. Staging environment live from week two for client review.</p></div>
+        <div class="svc-process__step"><div class="svc-process__step-num">Phase 04</div><div class="svc-process__step-bar"></div><h3 class="svc-process__step-title">Launch</h3><p class="svc-process__step-body">Zero-downtime deployment, DNS migration support, Search Console monitoring, and 30-day post-launch performance watch. We don't disappear at go-live.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-results">
+    <div class="svc-results__inner">
+      <p class="svc-results__eyebrow">Recent Results</p>
+      <div class="svc-results__stats">
+        <div class="svc-results__stat"><span class="svc-results__stat-val"><span data-count="1.8" data-suffix="s" data-decimals="1">0s</span></span><span class="svc-results__stat-label">Largest Contentful Paint</span><span class="svc-results__stat-client">Foster/Foster</span></div>
+        <div class="svc-results__stat"><span class="svc-results__stat-val"><span data-count="99">0</span></span><span class="svc-results__stat-label">Lighthouse performance</span><span class="svc-results__stat-client">Beanvelope</span></div>
+        <div class="svc-results__stat"><span class="svc-results__stat-val"><span data-count="5">0</span></span><span class="svc-results__stat-label">Day average launch</span><span class="svc-results__stat-client">Across 14 projects, FY25</span></div>
+      </div>
+      <div class="svc-results__kpis">
+        <div class="svc-results__kpi"><span class="svc-results__kpi-arrow">↳</span>Foster/Foster's new site went from 4.8s LCP to 1.8s — resulting in a 22% bounce rate reduction within 30 days.</div>
+        <div class="svc-results__kpi"><span class="svc-results__kpi-arrow">↳</span>Nordlake's Shopify Plus rebuild reduced checkout steps from 5 to 3 and lifted completed purchases by 34%.</div>
+        <div class="svc-results__kpi"><span class="svc-results__kpi-arrow">↳</span>Linework's headless Sanity build allows their 3-person marketing team to publish new campaigns without developer involvement.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-other">
+    <div class="svc-other__inner">
+      <p class="svc-other__eyebrow">Also in Our Studio</p>
+      <div class="svc-other__grid">
+        <a class="svc-other__item" href="service-seo.html"><span class="svc-other__item-num">01</span><span class="svc-other__item-title">Search &amp; SEO</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-paid-media.html"><span class="svc-other__item-num">02</span><span class="svc-other__item-title">Paid Media</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-social.html"><span class="svc-other__item-num">03</span><span class="svc-other__item-title">Social &amp; Content</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-cro.html"><span class="svc-other__item-num">04</span><span class="svc-other__item-title">Conversion Optimisation</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-brand.html"><span class="svc-other__item-num">06</span><span class="svc-other__item-title">Brand &amp; Identity</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-email.html"><span class="svc-other__item-num">07</span><span class="svc-other__item-title">Email &amp; Lifecycle</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-video.html"><span class="svc-other__item-num">08</span><span class="svc-other__item-title">Video &amp; Motion</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-strategy.html"><span class="svc-other__item-num">09</span><span class="svc-other__item-title">Strategy &amp; Insights</span><span class="svc-other__item-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-footer">
+    <div class="cta-footer__wash" aria-hidden="true"></div>
+    <div class="container">
+      <span class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>Let's talk</span>
+      <h2 class="cta-footer__headline">Ready to build<br /><em>something fast</em>?</h2>
+      <div class="cta-footer__ctas">
+        <a class="arrow-btn arrow-btn--primary" href="contact.html" data-magnetic>Get a proposal<span class="arrow-btn__arrow">→</span></a>
+        <a class="arrow-btn arrow-btn--dark" href="services.html" data-magnetic>All services<span class="arrow-btn__arrow">→</span></a>
+      </div>
+      <footer class="cta-footer__footer">
+        <div><div class="cta-footer__brand"><span class="cta-footer__brand-mark">R</span><span class="cta-footer__brand-name">Roc &amp; Rose Digital</span></div><p class="cta-footer__tagline">An independent digital marketing studio. Built in Naarm, Melbourne.</p></div>
+        <nav><div class="cta-footer__col-head">Studio</div><a class="cta-footer__col-link" href="services.html">Services</a><a class="cta-footer__col-link" href="work.html">Work</a><a class="cta-footer__col-link" href="index.html#process">Process</a></nav>
+        <nav><div class="cta-footer__col-head">Connect</div><a class="cta-footer__col-link" href="mailto:hello@rocandrose.studio">Email</a><a class="cta-footer__col-link" href="#">Instagram</a><a class="cta-footer__col-link" href="#">LinkedIn</a></nav>
+        <nav><div class="cta-footer__col-head">Read</div><a class="cta-footer__col-link" href="#">Field Notes</a><a class="cta-footer__col-link" href="#">Case Library</a></nav>
+        <nav><div class="cta-footer__col-head">Legal</div><a class="cta-footer__col-link" href="#">Privacy</a><a class="cta-footer__col-link" href="#">Terms</a></nav>
+      </footer>
+      <div class="cta-footer__bottom"><span>© 2026 Roc &amp; Rose Digital · ABN 47 218 991 044</span><span>Made on Wurundjeri Country</span></div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core/dist/barba.umd.min.js"></script>
+<script src="js/lenis-init.js"></script>
+<script src="js/gsap-animations.js"></script>
+<script src="js/barba-transitions.js"></script>
+<script src="js/service-page.js"></script>
+</body>
+</html>

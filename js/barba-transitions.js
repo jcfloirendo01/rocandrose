@@ -222,6 +222,13 @@
           reinitContactForm();
         },
       },
+      {
+        namespace: 'service',
+        afterEnter() {
+          reinitAnimations();
+          window.RRServicePage?.init();
+        },
+      },
     ],
 
     // ── Global before hook ────────────────────────────────────────────────

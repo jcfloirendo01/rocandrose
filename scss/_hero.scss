@@ -1,5 +1,27 @@
 @use 'tokens' as *;
 
+// ── Hero blob keyframes (GPU compositor — no JS, no canvas) ──────────────────
+@keyframes heroBlobA {
+  0%        { transform: translate(0, 0)       scale(1);    }
+  25%       { transform: translate(8%, -6%)    scale(1.08); }
+  50%       { transform: translate(-4%, 10%)   scale(0.94); }
+  75%       { transform: translate(11%, 3%)    scale(1.05); }
+  100%      { transform: translate(0, 0)       scale(1);    }
+}
+
+@keyframes heroBlobB {
+  0%        { transform: translate(0, 0)       scale(1);    }
+  33%       { transform: translate(-9%, 7%)    scale(1.1);  }
+  66%       { transform: translate(7%, -8%)    scale(0.92); }
+  100%      { transform: translate(0, 0)       scale(1);    }
+}
+
+@keyframes heroBlobC {
+  0%        { transform: translate(0, 0)       scale(1);    opacity: .5; }
+  50%       { transform: translate(-6%, -4%)   scale(1.12); opacity: .7; }
+  100%      { transform: translate(0, 0)       scale(1);    opacity: .5; }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -9,12 +31,30 @@
   display: flex;
   flex-direction: column;
 
-  &__canvas {
+  // Coral blob — oversized so translate() never exposes a gap at the edges
+  &::before {
+    content: '';
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
+    inset: -25%;
+    z-index: 0;
+    background: radial-gradient(ellipse 43% 37% at 31% 42%, rgba($coral, .30) 0%, transparent 70%);
+    animation: heroBlobA 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  // Blue blob — oversized, drifts in opposite phase
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -25%;
+    z-index: 0;
+    background: radial-gradient(ellipse 40% 40% at 69% 62%, rgba($blue, .26) 0%, transparent 70%);
+    animation: heroBlobB 26s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &__canvas {
+    display: none; // canvas replaced by CSS blobs — kept in HTML for Barba compat
   }
 
   &__scrim {
@@ -51,9 +91,13 @@
     line-height: 1.02;
     letter-spacing: -.035em;
     margin: 0;
-    max-width: 14ch;
+    max-width: 16ch;
     padding-bottom: .08em;
     overflow: hidden;
+
+    @media (max-width: #{$bp-mobile}) {
+      font-size: clamp(48px, 9vw, 148px);
+    }
 
     em {
       font-style: italic;

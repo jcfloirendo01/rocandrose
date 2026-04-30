@@ -16,19 +16,21 @@
 
   // ── Create Lenis instance ─────────────────────────────────────────────────
   const lenis = new Lenis({
-    duration: 1.3,
+    duration: 0.9,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // expo-out
     orientation: 'vertical',
     gestureOrientation: 'vertical',
     smoothWheel: true,
-    wheelMultiplier: 1,
-    touchMultiplier: 2,
+    wheelMultiplier: 0.85,
+    touchMultiplier: 1.5,
     infinite: false,
   });
 
   // ── Wire Lenis → GSAP ScrollTrigger ──────────────────────────────────────
+  // Use the GSAP ticker to drive ScrollTrigger rather than every Lenis scroll
+  // event — this avoids calling ScrollTrigger.update() up to 60× per second.
   if (ScrollTrigger) {
-    lenis.on('scroll', ScrollTrigger.update);
+    gsap && gsap.ticker.add(() => ScrollTrigger.update());
   }
 
   // Drive Lenis from GSAP's RAF ticker so they stay in sync

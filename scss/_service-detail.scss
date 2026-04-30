@@ -1,0 +1,588 @@
+@use 'tokens' as *;
+
+// ── Service Sub-navigation ────────────────────────────────────────────────────
+.service-subnav {
+  position: sticky;
+  top: 60px;
+  z-index: 50;
+  background: rgba($ink, .96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid $line-dark;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar { display: none; }
+
+  &__inner {
+    display: flex;
+    min-width: max-content;
+    padding: 0 var(--gutter);
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__link {
+    font-family: $font-mono;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba($paper, .35);
+    text-decoration: none;
+    padding: 16px 20px;
+    white-space: nowrap;
+    position: relative;
+    transition: color .2s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: var(--svc-accent, #{$coral});
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s $ease-out-quart;
+    }
+
+    &:hover { color: rgba($paper, .6); }
+
+    &.is-active {
+      color: $paper;
+
+      &::after { transform: scaleX(1); }
+    }
+  }
+}
+
+// ── Service Hero ──────────────────────────────────────────────────────────────
+// Reuses heroBlobA / heroBlobB keyframes defined in _hero.scss
+.svc-hero {
+  position: relative;
+  min-height: 82vh;
+  background: $ink;
+  color: $paper;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -25%;
+    background: radial-gradient(ellipse 43% 37% at 31% 42%, rgba($coral, .20) 0%, transparent 70%);
+    animation: heroBlobA 22s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -25%;
+    background: radial-gradient(ellipse 40% 40% at 69% 62%, rgba($blue, .17) 0%, transparent 70%);
+    animation: heroBlobB 28s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &__scrim {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba($ink, .55) 0%, rgba($ink, 0) 55%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: $container;
+    margin: 0 auto;
+    padding: 160px var(--gutter) 88px;
+  }
+
+  &__num {
+    font-family: $font-mono;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--svc-accent, #{$coral});
+    margin-bottom: 28px;
+    opacity: 0;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(48px, 7.5vw, 112px);
+    line-height: 1.02;
+    letter-spacing: -.03em;
+    margin: 0 0 36px;
+    opacity: 0;
+    transform: translateY(32px);
+
+    em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--svc-accent, #{$coral});
+    }
+  }
+
+  &__lede {
+    font-family: $font-sans;
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba($paper, .62);
+    max-width: 500px;
+    margin-bottom: 56px;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  &__stats {
+    display: flex;
+    gap: 56px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+
+    @media (max-width: #{$bp-mobile}) { gap: 32px; }
+  }
+
+  &__stat-val {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(32px, 4.5vw, 56px);
+    line-height: 1;
+    color: var(--svc-accent, #{$coral});
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__stat-label {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba($paper, .42);
+  }
+}
+
+// ── Overview ──────────────────────────────────────────────────────────────────
+.svc-overview {
+  background: $paper;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: $container;
+    margin: 0 auto;
+    padding: $section-pad var(--gutter);
+
+    @media (max-width: #{$bp-tablet}) {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: $mute;
+    margin-bottom: 20px;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -.022em;
+    color: $ink;
+    margin: 0 0 28px;
+
+    em { font-style: italic; font-weight: 300; }
+  }
+
+  &__body {
+    font-family: $font-sans;
+    font-size: 17px;
+    line-height: 1.72;
+    color: $mute;
+    margin: 0;
+  }
+
+  &__principles { display: flex; flex-direction: column; }
+
+  &__principle {
+    border-top: 1px solid $line;
+    padding: 28px 0;
+
+    &:last-child { border-bottom: 1px solid $line; }
+
+    &-num {
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .12em;
+      color: var(--svc-accent, #{$coral});
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: -.005em;
+      color: $ink;
+      margin: 0 0 8px;
+    }
+
+    &-body {
+      font-family: $font-sans;
+      font-size: 14px;
+      line-height: 1.68;
+      color: $mute;
+      margin: 0;
+    }
+  }
+}
+
+// ── Includes / Deliverables ───────────────────────────────────────────────────
+.svc-includes {
+  background: $ink;
+  padding: $section-pad var(--gutter);
+
+  &__inner {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba($paper, .38);
+    margin-bottom: 40px;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+    color: $paper;
+    margin: 0 0 56px;
+    max-width: 720px;
+
+    em { font-style: italic; color: var(--svc-accent, #{$coral}); }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: $line-dark;
+    border: 1px solid $line-dark;
+
+    @media (max-width: #{$bp-tablet}) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: #{$bp-mobile}) { grid-template-columns: 1fr; }
+  }
+
+  &__item {
+    background: $ink;
+    padding: 36px 32px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: background .2s;
+
+    &:hover { background: rgba($paper, .04); }
+
+    &-num {
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .1em;
+      color: var(--svc-accent, #{$coral});
+      margin-bottom: 18px;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -.005em;
+      color: $paper;
+      margin: 0 0 10px;
+    }
+
+    &-desc {
+      font-family: $font-sans;
+      font-size: 13px;
+      line-height: 1.62;
+      color: rgba($paper, .48);
+      margin: 0;
+    }
+  }
+}
+
+// ── Process ───────────────────────────────────────────────────────────────────
+.svc-process {
+  background: $paper-deep;
+  padding: $section-pad var(--gutter);
+
+  &__inner {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: $mute;
+    margin-bottom: 20px;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.5vw, 48px);
+    letter-spacing: -.025em;
+    color: $ink;
+    margin: 0 0 64px;
+
+    em { font-style: italic; }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+
+    @media (max-width: #{$bp-tablet}) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: #{$bp-mobile}) { grid-template-columns: 1fr; }
+  }
+
+  &__step {
+    padding: 40px 40px 40px 0;
+    border-top: 1px solid $line;
+    opacity: 0;
+    transform: translateY(24px);
+
+    @media (max-width: #{$bp-tablet}) {
+      padding: 32px 24px 32px 0;
+    }
+
+    &-num {
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--svc-accent, #{$coral});
+      margin-bottom: 24px;
+    }
+
+    &-bar {
+      width: 28px;
+      height: 2px;
+      background: var(--svc-accent, #{$coral});
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      font-weight: 600;
+      font-size: 17px;
+      letter-spacing: -.005em;
+      color: $ink;
+      margin: 0 0 14px;
+    }
+
+    &-body {
+      font-family: $font-sans;
+      font-size: 14px;
+      line-height: 1.72;
+      color: $mute;
+      margin: 0;
+    }
+  }
+}
+
+// ── Results ───────────────────────────────────────────────────────────────────
+.svc-results {
+  background: $ink;
+  padding: $section-pad var(--gutter);
+
+  &__inner {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba($paper, .38);
+    margin-bottom: 56px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: $line-dark;
+    border: 1px solid $line-dark;
+    margin-bottom: 48px;
+
+    @media (max-width: #{$bp-mobile}) { grid-template-columns: 1fr; }
+  }
+
+  &__stat {
+    background: $ink;
+    padding: 48px 40px;
+
+    @media (max-width: #{$bp-mobile}) { padding: 36px 28px; }
+
+    &-val {
+      display: block;
+      font-family: $font-serif;
+      font-style: italic;
+      font-size: clamp(44px, 5.5vw, 80px);
+      line-height: 1;
+      color: var(--svc-accent, #{$coral});
+      margin-bottom: 20px;
+    }
+
+    &-label {
+      display: block;
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba($paper, .45);
+      margin-bottom: 8px;
+    }
+
+    &-client {
+      display: block;
+      font-family: $font-sans;
+      font-size: 12px;
+      color: rgba($paper, .28);
+    }
+  }
+
+  &__kpis { display: flex; flex-direction: column; }
+
+  &__kpi {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid $line-dark;
+    font-family: $font-sans;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba($paper, .62);
+
+    &-arrow {
+      color: var(--svc-accent, #{$coral});
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+// ── Other Services cross-links ────────────────────────────────────────────────
+.svc-other {
+  background: $paper;
+  padding: $section-pad var(--gutter);
+
+  &__inner {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: $mute;
+    margin-bottom: 48px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: $line;
+    border: 1px solid $line;
+
+    @media (max-width: #{$bp-tablet}) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: #{$bp-mobile}) { grid-template-columns: 1fr; }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 28px 24px;
+    background: $paper;
+    text-decoration: none;
+    transition: background .2s;
+
+    &:hover {
+      background: $paper-deep;
+
+      .svc-other__item-arrow { transform: translateX(4px); }
+    }
+
+    &-num {
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .1em;
+      color: $mute;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: -.005em;
+      color: $ink;
+      flex: 1;
+    }
+
+    &-arrow {
+      font-size: 13px;
+      color: $mute;
+      transition: transform .2s $ease-out-quart;
+      align-self: flex-end;
+    }
+  }
+}
+
+// ── Practice link (used on services.html) ────────────────────────────────────
+.svc-practice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $font-mono;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 28px;
+  transition: gap .22s $ease-out-quart, opacity .2s;
+
+  &:hover { gap: 14px; opacity: .75; }
+}
