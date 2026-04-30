@@ -6,6 +6,8 @@
   <title>Roc &amp; Rose Digital — Strategic Digital Partner · Melbourne</title>
   <meta name="description" content="Roc &amp; Rose is a Melbourne-built digital agency turning ambitious brands into category leaders through SEO, Paid Ads, Social, Web Design, and more." />
 
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,17 +26,72 @@
 
 <!-- Sticky nav (outside barba container so it persists) -->
 <nav class="nav nav--sticky" aria-label="Site navigation" style="position:fixed;">
-  <a class="nav__logo" href="index.html">
+  <a class="nav__logo" href="/">
     <span class="nav__logo-mark" aria-hidden="true">R</span>
     <span class="nav__logo-name">Roc &amp; Rose</span>
   </a>
   <div class="nav__links hide-mobile">
-    <a class="nav__link" href="services.html">Services</a>
-    <a class="nav__link" href="work.html">Work</a>
+    <div class="nav__dropdown">
+            <a class="nav__link nav__dropdown-trigger" href="services">Services <svg class="nav__dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="nav__dropdown-panel" role="region" aria-label="Services menu">
+              <div class="nav__dropdown-grid">
+                <a class="nav__dropdown-item" href="service-seo">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.25"/><line x1="12.5" y1="12.5" x2="17" y2="17"/></svg></span>
+                  <span class="nav__dropdown-name">Search &amp; SEO</span>
+                  <span class="nav__dropdown-desc">Technical SEO, content &amp; topical authority</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-paid-media">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,15 7,9 11,12 18,4"/><polyline points="14,4 18,4 18,8"/></svg></span>
+                  <span class="nav__dropdown-name">Paid Media</span>
+                  <span class="nav__dropdown-desc">Google, Meta, TikTok &amp; programmatic</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-social">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="10" r="2.25"/><circle cx="15" cy="4.5" r="2.25"/><circle cx="15" cy="15.5" r="2.25"/><line x1="7.1" y1="9" x2="13" y2="5.9"/><line x1="7.1" y1="11" x2="13" y2="14.1"/></svg></span>
+                  <span class="nav__dropdown-name">Social &amp; Content</span>
+                  <span class="nav__dropdown-desc">Strategy, production &amp; community</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-cro">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="3.5" rx="1"/><rect x="5" y="7.5" width="10" height="3.5" rx="1"/><rect x="7" y="11" width="6" height="4" rx="1"/></svg></span>
+                  <span class="nav__dropdown-name">Conversion Optimisation</span>
+                  <span class="nav__dropdown-desc">A/B testing, analytics &amp; UX research</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-web">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="13" rx="2"/><line x1="2" y1="8.5" x2="18" y2="8.5"/><circle cx="5" cy="6.25" r=".75" fill="currentColor" stroke="none"/><circle cx="8" cy="6.25" r=".75" fill="currentColor" stroke="none"/></svg></span>
+                  <span class="nav__dropdown-name">Web Design &amp; Build</span>
+                  <span class="nav__dropdown-desc">Webflow, Next.js &amp; Shopify — fast &amp; ranked</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-brand">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="10,2 12.2,7.6 18.2,8.2 13.8,12.2 15.2,18.1 10,15 4.8,18.1 6.2,12.2 1.8,8.2 7.8,7.6"/></svg></span>
+                  <span class="nav__dropdown-name">Brand &amp; Identity</span>
+                  <span class="nav__dropdown-desc">Logos, systems, voice &amp; guidelines</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-email">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="16" height="12" rx="1.5"/><polyline points="2,5.5 10,12 18,5.5"/></svg></span>
+                  <span class="nav__dropdown-name">Email &amp; Lifecycle</span>
+                  <span class="nav__dropdown-desc">Klaviyo, HubSpot, flows &amp; retention</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-video">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5,3.5 17,10 5,16.5"/></svg></span>
+                  <span class="nav__dropdown-name">Video &amp; Motion</span>
+                  <span class="nav__dropdown-desc">Director-led in-studio production</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-strategy">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="7.5"/><circle cx="10" cy="10" r="3"/><line x1="10" y1="2.5" x2="10" y2="4.5"/><line x1="10" y1="15.5" x2="10" y2="17.5"/><line x1="2.5" y1="10" x2="4.5" y2="10"/><line x1="15.5" y1="10" x2="17.5" y2="10"/></svg></span>
+                  <span class="nav__dropdown-name">Strategy &amp; Insights</span>
+                  <span class="nav__dropdown-desc">Positioning, research &amp; GTM planning</span>
+                </a>
+              </div>
+              <div class="nav__dropdown-footer">
+                <span class="nav__dropdown-footer-note">9 practices · Elwood studio</span>
+                <a class="nav__dropdown-all" href="services">View all →</a>
+              </div>
+            </div>
+          </div>
+    <a class="nav__link" href="work">Work</a>
     <a class="nav__link" href="index.html#process">Process</a>
     <a class="nav__link" href="index.html#studio">Studio</a>
-    <a class="nav__link" href="contact.html">Contact</a>
-    <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+    <a class="nav__link" href="contact">Contact</a>
+    <a class="nav__link nav__cta" href="contact">Start a project →</a>
   </div>
   <button class="nav__hamburger show-mobile" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -47,13 +104,13 @@
     <span></span><span></span>
   </button>
   <ul class="mobile-menu__links">
-    <li><a class="mobile-menu__link" href="services.html">Services</a></li>
-    <li><a class="mobile-menu__link" href="work.html">Work</a></li>
+    <li><a class="mobile-menu__link" href="services">Services</a></li>
+    <li><a class="mobile-menu__link" href="work">Work</a></li>
     <li><a class="mobile-menu__link" href="index.html#process">Process</a></li>
     <li><a class="mobile-menu__link" href="index.html#studio">Studio</a></li>
-    <li><a class="mobile-menu__link" href="contact.html"><em>Contact</em></a></li>
+    <li><a class="mobile-menu__link" href="contact"><em>Contact</em></a></li>
   </ul>
-  <p class="mobile-menu__footer">Roc &amp; Rose · Fitzroy · Melbourne · Est. 2017</p>
+  <p class="mobile-menu__footer">Roc &amp; Rose · Elwood · Melbourne · Est. 2017</p>
 </div>
 
 <!-- ── Barba wrapper ──────────────────────────────────────────────────────── -->
@@ -71,17 +128,72 @@
 
     <!-- Persistent nav placeholder (absolute) -->
     <header class="nav" style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;" aria-label="Primary navigation">
-      <a class="nav__logo" href="index.html">
+      <a class="nav__logo" href="/">
         <span class="nav__logo-mark" aria-hidden="true">R</span>
         <span class="nav__logo-name">Roc &amp; Rose</span>
       </a>
       <div class="nav__links hide-mobile">
-        <a class="nav__link" href="services.html">Services</a>
-        <a class="nav__link" href="work.html">Work</a>
+        <div class="nav__dropdown">
+            <a class="nav__link nav__dropdown-trigger" href="services">Services <svg class="nav__dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="nav__dropdown-panel" role="region" aria-label="Services menu">
+              <div class="nav__dropdown-grid">
+                <a class="nav__dropdown-item" href="service-seo">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.25"/><line x1="12.5" y1="12.5" x2="17" y2="17"/></svg></span>
+                  <span class="nav__dropdown-name">Search &amp; SEO</span>
+                  <span class="nav__dropdown-desc">Technical SEO, content &amp; topical authority</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-paid-media">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,15 7,9 11,12 18,4"/><polyline points="14,4 18,4 18,8"/></svg></span>
+                  <span class="nav__dropdown-name">Paid Media</span>
+                  <span class="nav__dropdown-desc">Google, Meta, TikTok &amp; programmatic</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-social">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="10" r="2.25"/><circle cx="15" cy="4.5" r="2.25"/><circle cx="15" cy="15.5" r="2.25"/><line x1="7.1" y1="9" x2="13" y2="5.9"/><line x1="7.1" y1="11" x2="13" y2="14.1"/></svg></span>
+                  <span class="nav__dropdown-name">Social &amp; Content</span>
+                  <span class="nav__dropdown-desc">Strategy, production &amp; community</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-cro">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="3.5" rx="1"/><rect x="5" y="7.5" width="10" height="3.5" rx="1"/><rect x="7" y="11" width="6" height="4" rx="1"/></svg></span>
+                  <span class="nav__dropdown-name">Conversion Optimisation</span>
+                  <span class="nav__dropdown-desc">A/B testing, analytics &amp; UX research</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-web">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="13" rx="2"/><line x1="2" y1="8.5" x2="18" y2="8.5"/><circle cx="5" cy="6.25" r=".75" fill="currentColor" stroke="none"/><circle cx="8" cy="6.25" r=".75" fill="currentColor" stroke="none"/></svg></span>
+                  <span class="nav__dropdown-name">Web Design &amp; Build</span>
+                  <span class="nav__dropdown-desc">Webflow, Next.js &amp; Shopify — fast &amp; ranked</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-brand">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="10,2 12.2,7.6 18.2,8.2 13.8,12.2 15.2,18.1 10,15 4.8,18.1 6.2,12.2 1.8,8.2 7.8,7.6"/></svg></span>
+                  <span class="nav__dropdown-name">Brand &amp; Identity</span>
+                  <span class="nav__dropdown-desc">Logos, systems, voice &amp; guidelines</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-email">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="16" height="12" rx="1.5"/><polyline points="2,5.5 10,12 18,5.5"/></svg></span>
+                  <span class="nav__dropdown-name">Email &amp; Lifecycle</span>
+                  <span class="nav__dropdown-desc">Klaviyo, HubSpot, flows &amp; retention</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-video">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5,3.5 17,10 5,16.5"/></svg></span>
+                  <span class="nav__dropdown-name">Video &amp; Motion</span>
+                  <span class="nav__dropdown-desc">Director-led in-studio production</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-strategy">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="7.5"/><circle cx="10" cy="10" r="3"/><line x1="10" y1="2.5" x2="10" y2="4.5"/><line x1="10" y1="15.5" x2="10" y2="17.5"/><line x1="2.5" y1="10" x2="4.5" y2="10"/><line x1="15.5" y1="10" x2="17.5" y2="10"/></svg></span>
+                  <span class="nav__dropdown-name">Strategy &amp; Insights</span>
+                  <span class="nav__dropdown-desc">Positioning, research &amp; GTM planning</span>
+                </a>
+              </div>
+              <div class="nav__dropdown-footer">
+                <span class="nav__dropdown-footer-note">9 practices · Elwood studio</span>
+                <a class="nav__dropdown-all" href="services">View all →</a>
+              </div>
+            </div>
+          </div>
+        <a class="nav__link" href="work">Work</a>
         <a class="nav__link" href="#process">Process</a>
         <a class="nav__link" href="#studio">Studio</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-        <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+        <a class="nav__link" href="contact">Contact</a>
+        <a class="nav__link nav__cta" href="contact">Start a project →</a>
       </div>
       <button class="nav__hamburger show-mobile" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -115,11 +227,11 @@
       </p>
 
       <div class="hero__ctas">
-        <a class="arrow-btn arrow-btn--primary" href="contact.html" data-magnetic>
+        <a class="arrow-btn arrow-btn--primary" href="contact" data-magnetic>
           Start a project
           <span class="arrow-btn__arrow">→</span>
         </a>
-        <a class="arrow-btn arrow-btn--dark" href="work.html" data-magnetic>
+        <a class="arrow-btn arrow-btn--dark" href="work" data-magnetic>
           See our work
           <span class="arrow-btn__arrow">→</span>
         </a>
@@ -127,9 +239,9 @@
 
       <div class="hero__footer-strip" aria-hidden="true">
         <div class="hero__footer-strip-left">
-          <span>—37.8136° S</span>
-          <span>144.9631° E</span>
-          <span>Fitzroy / Naarm</span>
+          <span>—37.889° S</span>
+          <span>144.988° E</span>
+          <span>Elwood / Naarm</span>
         </div>
         <div class="hero__footer-strip-right">
           <span>Scroll</span>
@@ -201,7 +313,7 @@
 
       <div class="services__grid">
 
-        <article class="service-card service-card--highlight">
+        <a class="service-card service-card--highlight" href="service-seo">
           <div class="service-card__header">
             <span class="service-card__num">01</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -214,9 +326,9 @@
             <span class="service-card__tag">Local SEO</span>
             <span class="service-card__tag">Schema</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card">
+        <a class="service-card" href="service-paid-media">
           <div class="service-card__header">
             <span class="service-card__num">02</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -229,23 +341,23 @@
             <span class="service-card__tag">TikTok</span>
             <span class="service-card__tag">Programmatic</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card">
+        <a class="service-card" href="service-social">
           <div class="service-card__header">
             <span class="service-card__num">03</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
           </div>
           <h3 class="service-card__title">Social &amp; Content</h3>
-          <p class="service-card__desc">Editorial calendars that don't feel like calendars. We script, shoot, and publish in‑house, in our Fitzroy studio.</p>
+          <p class="service-card__desc">Editorial calendars that don't feel like calendars. We script, shoot, and publish in‑house, in our Elwood studio.</p>
           <div class="service-card__tags">
             <span class="service-card__tag">Strategy</span>
             <span class="service-card__tag">Production</span>
             <span class="service-card__tag">Community</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card">
+        <a class="service-card" href="service-cro">
           <div class="service-card__header">
             <span class="service-card__num">04</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -257,9 +369,9 @@
             <span class="service-card__tag">Analytics</span>
             <span class="service-card__tag">UX research</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card service-card--highlight">
+        <a class="service-card service-card--highlight" href="service-web">
           <div class="service-card__header">
             <span class="service-card__num">05</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -271,9 +383,9 @@
             <span class="service-card__tag">Next.js</span>
             <span class="service-card__tag">Shopify+</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card">
+        <a class="service-card" href="service-brand">
           <div class="service-card__header">
             <span class="service-card__num">06</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -285,9 +397,9 @@
             <span class="service-card__tag">Voice</span>
             <span class="service-card__tag">Guidelines</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card">
+        <a class="service-card" href="service-email">
           <div class="service-card__header">
             <span class="service-card__num">07</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -299,9 +411,9 @@
             <span class="service-card__tag">HubSpot</span>
             <span class="service-card__tag">CDP</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card">
+        <a class="service-card" href="service-video">
           <div class="service-card__header">
             <span class="service-card__num">08</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -313,9 +425,9 @@
             <span class="service-card__tag">Edit</span>
             <span class="service-card__tag">Motion</span>
           </div>
-        </article>
+        </a>
 
-        <article class="service-card service-card--highlight">
+        <a class="service-card service-card--highlight" href="service-strategy">
           <div class="service-card__header">
             <span class="service-card__num">09</span>
             <span class="service-card__arrow" aria-hidden="true">→</span>
@@ -327,7 +439,7 @@
             <span class="service-card__tag">Research</span>
             <span class="service-card__tag">Planning</span>
           </div>
-        </article>
+        </a>
 
       </div>
     </div>
@@ -380,13 +492,13 @@
             <em>frame</em> on the wall.
           </h2>
         </div>
-        <a class="cases__all-link" href="work.html">All case studies →</a>
+        <a class="cases__all-link" href="work">All case studies →</a>
       </div>
 
       <div class="cases__list">
 
         <!-- Case 01 -->
-        <a class="case-card" href="work.html" aria-label="Nordlake case study">
+        <a class="case-card" href="work" aria-label="Nordlake case study">
           <div class="case-card__visual" style="background:linear-gradient(135deg,#E75D4A,#367FB6);">
             <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 20% 30%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
             <div class="case-card__visual-lines" style="background:repeating-linear-gradient(60deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
@@ -419,7 +531,7 @@
         </a>
 
         <!-- Case 02 -->
-        <a class="case-card case-card--reversed" href="work.html" aria-label="Halberd and Co case study">
+        <a class="case-card case-card--reversed" href="work" aria-label="Halberd and Co case study">
           <div class="case-card__visual" style="background:linear-gradient(135deg,#367FB6,#E75D4A);">
             <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 40% 40%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 65% 75%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
             <div class="case-card__visual-lines" style="background:repeating-linear-gradient(90deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
@@ -452,7 +564,7 @@
         </a>
 
         <!-- Case 03 -->
-        <a class="case-card" href="work.html" aria-label="Beanvelope case study">
+        <a class="case-card" href="work" aria-label="Beanvelope case study">
           <div class="case-card__visual" style="background:linear-gradient(135deg,#E75D4A,#B85D45);">
             <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 60% 20%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 20% 80%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
             <div class="case-card__visual-lines" style="background:repeating-linear-gradient(120deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
@@ -485,7 +597,7 @@
         </a>
 
         <!-- Case 04 -->
-        <a class="case-card case-card--reversed" href="work.html" aria-label="Foster/Foster case study">
+        <a class="case-card case-card--reversed" href="work" aria-label="Foster/Foster case study">
           <div class="case-card__visual" style="background:linear-gradient(135deg,#367FB6,#1E4D7A);">
             <div class="case-card__visual-overlay" style="background:radial-gradient(circle at 30% 60%,rgba(245,241,235,.34) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(14,13,11,.4) 0%,transparent 60%);"></div>
             <div class="case-card__visual-lines" style="background:repeating-linear-gradient(150deg,transparent 0,transparent 8px,rgba(255,255,255,.04) 8px,rgba(255,255,255,.04) 9px);"></div>
@@ -633,7 +745,7 @@
             <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Launch + 30 days of optimization</li>
             <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Final playbook</li>
           </ul>
-          <a class="price-card__cta" href="contact.html">Get a proposal →</a>
+          <a class="price-card__cta" href="contact">Get a proposal →</a>
         </div>
 
         <div class="price-card price-card--featured">
@@ -651,7 +763,7 @@
             <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Quarterly strategy resets</li>
             <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Slack + Linear access</li>
           </ul>
-          <a class="price-card__cta" href="contact.html">Book an intro call →</a>
+          <a class="price-card__cta" href="contact">Book an intro call →</a>
         </div>
 
         <div class="price-card">
@@ -667,7 +779,7 @@
             <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Fractional CMO option</li>
             <li class="price-card__feature"><span class="price-card__feature-dot" aria-hidden="true">●</span> Aligned outcomes</li>
           </ul>
-          <a class="price-card__cta" href="contact.html">Get a proposal →</a>
+          <a class="price-card__cta" href="contact">Get a proposal →</a>
         </div>
 
       </div>
@@ -685,20 +797,21 @@
           </span>
           <h2 class="studio__headline" id="studio-heading">
             Built in<br />
-            <em class="studio__headline-coral">Fitzroy</em>.<br />
+            <em class="studio__headline-coral">Elwood</em>.<br />
             Made for<br />
             <em class="studio__headline-blue">everywhere</em>.
           </h2>
           <p class="studio__body">
-            We work out of a converted print warehouse on Gertrude Street.
-            The good kind of Melbourne — where the coffee is too strong and
-            the rent makes you negotiate harder. Drop in any Thursday for
-            an espresso and a whiteboard session.
+            We work out of a light-filled studio on Brighton Road, a
+            short walk from the bay. The good kind of Melbourne — where
+            the coffee is too strong and the rent makes you negotiate
+            harder. Drop in any Thursday for an espresso and a whiteboard
+            session.
           </p>
           <div class="studio__details">
             <div>
               <div class="studio__detail-label">Studio</div>
-              <div class="studio__detail-value">Level 2, 184 Gertrude St<br />Fitzroy VIC 3065</div>
+              <div class="studio__detail-value">Level 1, 104 Brighton Rd<br />Elwood VIC 3184</div>
             </div>
             <div>
               <div class="studio__detail-label">Hours</div>
@@ -731,10 +844,10 @@
               <div class="studio__map-pulse-ring"></div>
               <div class="studio__map-pulse-dot"></div>
             </div>
-            <div class="studio__map-label">R&amp;R Studio · Fitzroy</div>
+            <div class="studio__map-label">R&amp;R Studio · Elwood</div>
           </div>
           <span class="studio__map-coords-top">Naarm / Melbourne</span>
-          <span class="studio__map-coords-bot">−37.8011 · 144.9787</span>
+          <span class="studio__map-coords-bot">−37.889 · 144.988</span>
         </div>
       </div>
 
@@ -746,7 +859,7 @@
         </span>
         <span class="studio__melb-fact">
           <span class="studio__melb-fact-icon" aria-hidden="true">🚋</span>
-          Tram 86 stops outside our door
+          Tram 3a &amp; 16 stop at the corner
         </span>
         <span class="studio__melb-fact">
           <span class="studio__melb-fact-icon" aria-hidden="true">🏛</span>
@@ -854,7 +967,7 @@
         <em>opinions</em>.
       </h2>
       <div class="cta-footer__ctas">
-        <a class="arrow-btn arrow-btn--primary" href="contact.html" data-magnetic>
+        <a class="arrow-btn arrow-btn--primary" href="contact" data-magnetic>
           Start a project
           <span class="arrow-btn__arrow">→</span>
         </a>
@@ -879,8 +992,8 @@
         </div>
         <nav aria-label="Footer studio links">
           <div class="cta-footer__col-head">Studio</div>
-          <a class="cta-footer__col-link" href="services.html">Services</a>
-          <a class="cta-footer__col-link" href="work.html">Work</a>
+          <a class="cta-footer__col-link" href="services">Services</a>
+          <a class="cta-footer__col-link" href="work">Work</a>
           <a class="cta-footer__col-link" href="index.html#process">Process</a>
           <a class="cta-footer__col-link" href="index.html#studio">Studio</a>
         </nav>
@@ -929,6 +1042,7 @@
 <script src="js/lenis-init.js"></script>
 <script src="js/gsap-animations.js"></script>
 <script src="js/barba-transitions.js"></script>
+<script src="js/service-page.js"></script>
 
 </body>
 </html>

@@ -49,11 +49,34 @@
   }
 
   // ── Anchor links: let Lenis handle smooth scroll ──────────────────────────
+  // Handles both pure hash links (#process) and same-page path+hash links
+  // (index.html#process, /index#studio) so nav clicks never cause a reload.
+  function normPath(p) {
+    return p.replace(/\/index(\.html?)?$/, '/').replace(/\.html?$/, '') || '/';
+  }
+
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href^="#"]');
+    const link = e.target.closest('a[href]');
     if (!link) return;
-    const target = document.querySelector(link.getAttribute('href'));
+
+    const href = link.getAttribute('href') || '';
+    if (!href.includes('#')) return;
+
+    let hash;
+
+    if (href.startsWith('#')) {
+      // Pure hash link — always same page
+      hash = href;
+    } else {
+      // Path+hash link — only handle when destination is the current page
+      const dest = new URL(href, window.location.href);
+      if (normPath(dest.pathname) !== normPath(window.location.pathname)) return;
+      hash = dest.hash;
+    }
+
+    const target = document.querySelector(hash);
     if (!target) return;
+
     e.preventDefault();
     lenis.scrollTo(target, { offset: -80, duration: 1.4 });
   });

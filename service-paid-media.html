@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paid Media — Roc &amp; Rose Digital</title>
   <meta name="description" content="Google, Meta, TikTok, LinkedIn — ad accounts managed like instruments. Tuned daily, rebalanced weekly, retooled monthly." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -16,14 +17,69 @@
 <div class="cursor-inner" style="position:fixed;pointer-events:none;z-index:10001;mix-blend-mode:difference;"></div>
 
 <nav class="nav nav--sticky" style="position:fixed;">
-  <a class="nav__logo" href="index.html"><span class="nav__logo-mark">R</span><span class="nav__logo-name">Roc &amp; Rose</span></a>
+  <a class="nav__logo" href="/"><span class="nav__logo-mark">R</span><span class="nav__logo-name">Roc &amp; Rose</span></a>
   <div class="nav__links hide-mobile">
-    <a class="nav__link" href="services.html">Services</a>
-    <a class="nav__link" href="work.html">Work</a>
+    <div class="nav__dropdown">
+            <a class="nav__link nav__dropdown-trigger" href="services">Services <svg class="nav__dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="nav__dropdown-panel" role="region" aria-label="Services menu">
+              <div class="nav__dropdown-grid">
+                <a class="nav__dropdown-item" href="service-seo">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.25"/><line x1="12.5" y1="12.5" x2="17" y2="17"/></svg></span>
+                  <span class="nav__dropdown-name">Search &amp; SEO</span>
+                  <span class="nav__dropdown-desc">Technical SEO, content &amp; topical authority</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-paid-media">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,15 7,9 11,12 18,4"/><polyline points="14,4 18,4 18,8"/></svg></span>
+                  <span class="nav__dropdown-name">Paid Media</span>
+                  <span class="nav__dropdown-desc">Google, Meta, TikTok &amp; programmatic</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-social">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="5" cy="10" r="2.25"/><circle cx="15" cy="4.5" r="2.25"/><circle cx="15" cy="15.5" r="2.25"/><line x1="7.1" y1="9" x2="13" y2="5.9"/><line x1="7.1" y1="11" x2="13" y2="14.1"/></svg></span>
+                  <span class="nav__dropdown-name">Social &amp; Content</span>
+                  <span class="nav__dropdown-desc">Strategy, production &amp; community</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-cro">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="3.5" rx="1"/><rect x="5" y="7.5" width="10" height="3.5" rx="1"/><rect x="7" y="11" width="6" height="4" rx="1"/></svg></span>
+                  <span class="nav__dropdown-name">Conversion Optimisation</span>
+                  <span class="nav__dropdown-desc">A/B testing, analytics &amp; UX research</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-web">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="13" rx="2"/><line x1="2" y1="8.5" x2="18" y2="8.5"/><circle cx="5" cy="6.25" r=".75" fill="currentColor" stroke="none"/><circle cx="8" cy="6.25" r=".75" fill="currentColor" stroke="none"/></svg></span>
+                  <span class="nav__dropdown-name">Web Design &amp; Build</span>
+                  <span class="nav__dropdown-desc">Webflow, Next.js &amp; Shopify — fast &amp; ranked</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-brand">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="10,2 12.2,7.6 18.2,8.2 13.8,12.2 15.2,18.1 10,15 4.8,18.1 6.2,12.2 1.8,8.2 7.8,7.6"/></svg></span>
+                  <span class="nav__dropdown-name">Brand &amp; Identity</span>
+                  <span class="nav__dropdown-desc">Logos, systems, voice &amp; guidelines</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-email">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="16" height="12" rx="1.5"/><polyline points="2,5.5 10,12 18,5.5"/></svg></span>
+                  <span class="nav__dropdown-name">Email &amp; Lifecycle</span>
+                  <span class="nav__dropdown-desc">Klaviyo, HubSpot, flows &amp; retention</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-video">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5,3.5 17,10 5,16.5"/></svg></span>
+                  <span class="nav__dropdown-name">Video &amp; Motion</span>
+                  <span class="nav__dropdown-desc">Director-led in-studio production</span>
+                </a>
+                <a class="nav__dropdown-item" href="service-strategy">
+                  <span class="nav__dropdown-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="7.5"/><circle cx="10" cy="10" r="3"/><line x1="10" y1="2.5" x2="10" y2="4.5"/><line x1="10" y1="15.5" x2="10" y2="17.5"/><line x1="2.5" y1="10" x2="4.5" y2="10"/><line x1="15.5" y1="10" x2="17.5" y2="10"/></svg></span>
+                  <span class="nav__dropdown-name">Strategy &amp; Insights</span>
+                  <span class="nav__dropdown-desc">Positioning, research &amp; GTM planning</span>
+                </a>
+              </div>
+              <div class="nav__dropdown-footer">
+                <span class="nav__dropdown-footer-note">9 practices · Elwood studio</span>
+                <a class="nav__dropdown-all" href="services">View all →</a>
+              </div>
+            </div>
+          </div>
+    <a class="nav__link" href="work">Work</a>
     <a class="nav__link" href="index.html#process">Process</a>
     <a class="nav__link" href="index.html#studio">Studio</a>
-    <a class="nav__link" href="contact.html">Contact</a>
-    <a class="nav__link nav__cta" href="contact.html">Start a project →</a>
+    <a class="nav__link" href="contact">Contact</a>
+    <a class="nav__link nav__cta" href="contact">Start a project →</a>
   </div>
   <button class="nav__hamburger show-mobile" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </nav>
@@ -31,13 +87,13 @@
 <div class="mobile-menu">
   <button class="mobile-menu__close" aria-label="Close menu"><span></span><span></span></button>
   <ul class="mobile-menu__links">
-    <li><a class="mobile-menu__link" href="services.html">Services</a></li>
-    <li><a class="mobile-menu__link" href="work.html">Work</a></li>
+    <li><a class="mobile-menu__link" href="services">Services</a></li>
+    <li><a class="mobile-menu__link" href="work">Work</a></li>
     <li><a class="mobile-menu__link" href="index.html#process">Process</a></li>
     <li><a class="mobile-menu__link" href="index.html#studio">Studio</a></li>
-    <li><a class="mobile-menu__link" href="contact.html"><em>Contact</em></a></li>
+    <li><a class="mobile-menu__link" href="contact"><em>Contact</em></a></li>
   </ul>
-  <p class="mobile-menu__footer">Roc &amp; Rose · Fitzroy · Melbourne · Est. 2017</p>
+  <p class="mobile-menu__footer">Roc &amp; Rose · Elwood · Melbourne · Est. 2017</p>
 </div>
 
 <div data-barba="wrapper">
@@ -45,15 +101,15 @@
 
   <nav class="service-subnav" aria-label="All services">
     <div class="service-subnav__inner">
-      <a class="service-subnav__link" href="service-seo.html">01 · SEO</a>
-      <a class="service-subnav__link is-active" href="service-paid-media.html">02 · Paid Media</a>
-      <a class="service-subnav__link" href="service-social.html">03 · Social</a>
-      <a class="service-subnav__link" href="service-cro.html">04 · CRO</a>
-      <a class="service-subnav__link" href="service-web.html">05 · Web</a>
-      <a class="service-subnav__link" href="service-brand.html">06 · Brand</a>
-      <a class="service-subnav__link" href="service-email.html">07 · Email</a>
-      <a class="service-subnav__link" href="service-video.html">08 · Video</a>
-      <a class="service-subnav__link" href="service-strategy.html">09 · Strategy</a>
+      <a class="service-subnav__link" href="service-seo">01 · SEO</a>
+      <a class="service-subnav__link is-active" href="service-paid-media">02 · Paid Media</a>
+      <a class="service-subnav__link" href="service-social">03 · Social</a>
+      <a class="service-subnav__link" href="service-cro">04 · CRO</a>
+      <a class="service-subnav__link" href="service-web">05 · Web</a>
+      <a class="service-subnav__link" href="service-brand">06 · Brand</a>
+      <a class="service-subnav__link" href="service-email">07 · Email</a>
+      <a class="service-subnav__link" href="service-video">08 · Video</a>
+      <a class="service-subnav__link" href="service-strategy">09 · Strategy</a>
     </div>
   </nav>
 
@@ -216,14 +272,14 @@
     <div class="svc-other__inner">
       <p class="svc-other__eyebrow">Also in Our Studio</p>
       <div class="svc-other__grid">
-        <a class="svc-other__item" href="service-seo.html"><span class="svc-other__item-num">01</span><span class="svc-other__item-title">Search &amp; SEO</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-social.html"><span class="svc-other__item-num">03</span><span class="svc-other__item-title">Social &amp; Content</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-cro.html"><span class="svc-other__item-num">04</span><span class="svc-other__item-title">Conversion Optimisation</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-web.html"><span class="svc-other__item-num">05</span><span class="svc-other__item-title">Web Design &amp; Build</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-brand.html"><span class="svc-other__item-num">06</span><span class="svc-other__item-title">Brand &amp; Identity</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-email.html"><span class="svc-other__item-num">07</span><span class="svc-other__item-title">Email &amp; Lifecycle</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-video.html"><span class="svc-other__item-num">08</span><span class="svc-other__item-title">Video &amp; Motion</span><span class="svc-other__item-arrow">→</span></a>
-        <a class="svc-other__item" href="service-strategy.html"><span class="svc-other__item-num">09</span><span class="svc-other__item-title">Strategy &amp; Insights</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-seo"><span class="svc-other__item-num">01</span><span class="svc-other__item-title">Search &amp; SEO</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-social"><span class="svc-other__item-num">03</span><span class="svc-other__item-title">Social &amp; Content</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-cro"><span class="svc-other__item-num">04</span><span class="svc-other__item-title">Conversion Optimisation</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-web"><span class="svc-other__item-num">05</span><span class="svc-other__item-title">Web Design &amp; Build</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-brand"><span class="svc-other__item-num">06</span><span class="svc-other__item-title">Brand &amp; Identity</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-email"><span class="svc-other__item-num">07</span><span class="svc-other__item-title">Email &amp; Lifecycle</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-video"><span class="svc-other__item-num">08</span><span class="svc-other__item-title">Video &amp; Motion</span><span class="svc-other__item-arrow">→</span></a>
+        <a class="svc-other__item" href="service-strategy"><span class="svc-other__item-num">09</span><span class="svc-other__item-title">Strategy &amp; Insights</span><span class="svc-other__item-arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -234,12 +290,12 @@
       <span class="eyebrow eyebrow--dark"><span class="eyebrow__dot"></span>Let's talk</span>
       <h2 class="cta-footer__headline">Ready to scale<br /><em>paid media</em>?</h2>
       <div class="cta-footer__ctas">
-        <a class="arrow-btn arrow-btn--primary" href="contact.html" data-magnetic>Get a proposal<span class="arrow-btn__arrow">→</span></a>
-        <a class="arrow-btn arrow-btn--dark" href="services.html" data-magnetic>All services<span class="arrow-btn__arrow">→</span></a>
+        <a class="arrow-btn arrow-btn--primary" href="contact" data-magnetic>Get a proposal<span class="arrow-btn__arrow">→</span></a>
+        <a class="arrow-btn arrow-btn--dark" href="services" data-magnetic>All services<span class="arrow-btn__arrow">→</span></a>
       </div>
       <footer class="cta-footer__footer">
         <div><div class="cta-footer__brand"><span class="cta-footer__brand-mark">R</span><span class="cta-footer__brand-name">Roc &amp; Rose Digital</span></div><p class="cta-footer__tagline">An independent digital marketing studio. Built in Naarm, Melbourne.</p></div>
-        <nav><div class="cta-footer__col-head">Studio</div><a class="cta-footer__col-link" href="services.html">Services</a><a class="cta-footer__col-link" href="work.html">Work</a><a class="cta-footer__col-link" href="index.html#process">Process</a></nav>
+        <nav><div class="cta-footer__col-head">Studio</div><a class="cta-footer__col-link" href="services">Services</a><a class="cta-footer__col-link" href="work">Work</a><a class="cta-footer__col-link" href="index.html#process">Process</a></nav>
         <nav><div class="cta-footer__col-head">Connect</div><a class="cta-footer__col-link" href="mailto:hello@rocandrose.studio">Email</a><a class="cta-footer__col-link" href="#">Instagram</a><a class="cta-footer__col-link" href="#">LinkedIn</a></nav>
         <nav><div class="cta-footer__col-head">Read</div><a class="cta-footer__col-link" href="#">Field Notes</a><a class="cta-footer__col-link" href="#">Case Library</a></nav>
         <nav><div class="cta-footer__col-head">Legal</div><a class="cta-footer__col-link" href="#">Privacy</a><a class="cta-footer__col-link" href="#">Terms</a></nav>

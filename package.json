@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Roc & Rose Digital — Melbourne Agency Website",
   "scripts": {
+    "start": "node server.js",
     "sass": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
     "sass:watch": "sass scss/main.scss css/main.css --watch",
     "sass:dev": "sass scss/main.scss css/main.css --style=expanded"

@@ -10,6 +10,27 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+
+    // Blob background animation (mirrors home hero)
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -25%;
+      z-index: 0;
+      background: radial-gradient(ellipse 43% 37% at 31% 42%, rgba($coral, .28) 0%, transparent 70%);
+      animation: heroBlobA 20s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -25%;
+      z-index: 0;
+      background: radial-gradient(ellipse 40% 40% at 69% 62%, rgba($blue, .24) 0%, transparent 70%);
+      animation: heroBlobB 26s ease-in-out infinite;
+      pointer-events: none;
+    }
   }
 
   &__hero-scrim {
@@ -65,6 +86,16 @@
     padding: 64px 0;
     border-top: 1px solid $line;
     align-items: start;
+    text-decoration: none;
+    color: inherit;
+    transition: background .22s;
+
+    &:hover {
+      background: rgba($coral, .03);
+
+      .services-page__practice-title { color: $coral; }
+      .svc-practice-link { opacity: .75; letter-spacing: .18em; }
+    }
 
     @media (max-width: #{$bp-tablet}) {
       grid-template-columns: 1fr;
@@ -92,6 +123,7 @@
     line-height: .98;
     letter-spacing: -.025em;
     margin: 0 0 20px;
+    transition: color .22s;
   }
 
   &__practice-lede {
@@ -637,5 +669,334 @@
       line-height: 1.5;
       color: rgba(245, 241, 235, .55);
     }
+  }
+}
+
+// ─── Case Study Page ──────────────────────────────────────────────────────────
+.case-hero {
+  position: relative;
+  min-height: 88vh;
+  background: $ink;
+  color: $paper;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -25%;
+    z-index: 0;
+    background: radial-gradient(ellipse 43% 37% at 31% 42%, rgba($coral, .22) 0%, transparent 70%);
+    animation: heroBlobA 22s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -25%;
+    z-index: 0;
+    background: radial-gradient(ellipse 40% 40% at 69% 62%, rgba($blue, .18) 0%, transparent 70%);
+    animation: heroBlobB 28s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  &__visual {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: .35;
+  }
+
+  &__scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(to bottom, rgba($ink, .3) 0%, rgba($ink, .8) 60%, $ink 100%),
+      radial-gradient(ellipse at 50% 0%, rgba($ink, 0) 0%, rgba($ink, .4) 100%);
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: $container;
+    margin: 0 auto;
+    padding: 160px var(--gutter) 88px;
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: rgba($paper, .55);
+    margin-bottom: 28px;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(48px, 7.5vw, 112px);
+    line-height: 1.02;
+    letter-spacing: -.03em;
+    margin: 0 0 32px;
+    max-width: 18ch;
+
+    em { font-style: italic; font-weight: 300; color: $coral; }
+  }
+
+  &__sub {
+    font-family: $font-sans;
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba($paper, .65);
+    max-width: 520px;
+    margin-bottom: 64px;
+  }
+
+  &__kpis {
+    display: flex;
+    gap: 56px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-top: 1px solid $line-dark;
+
+    @media (max-width: #{$bp-mobile}) { gap: 32px; }
+  }
+
+  &__kpi {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &-val {
+      font-family: $font-serif;
+      font-style: italic;
+      font-size: clamp(32px, 4.5vw, 60px);
+      line-height: 1;
+      color: $coral;
+    }
+
+    &-label {
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba($paper, .42);
+    }
+  }
+}
+
+.case-overview {
+  background: $paper;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: $container;
+    margin: 0 auto;
+    padding: $section-pad var(--gutter);
+    align-items: start;
+
+    @media (max-width: #{$bp-tablet}) {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: $mute;
+    margin-bottom: 20px;
+  }
+
+  &__headline {
+    font-family: $font-serif;
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -.022em;
+    color: $ink;
+    margin: 0 0 28px;
+
+    em { font-style: italic; font-weight: 300; }
+  }
+
+  &__body {
+    font-family: $font-sans;
+    font-size: 17px;
+    line-height: 1.72;
+    color: $mute;
+    margin: 0;
+  }
+
+  &__pillars { display: flex; flex-direction: column; }
+
+  &__pillar {
+    border-top: 1px solid $line;
+    padding: 28px 0;
+
+    &:last-child { border-bottom: 1px solid $line; }
+
+    &-num {
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .12em;
+      color: $coral;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      font-weight: 600;
+      font-size: 14px;
+      color: $ink;
+      margin: 0 0 8px;
+    }
+
+    &-body {
+      font-family: $font-sans;
+      font-size: 14px;
+      line-height: 1.68;
+      color: $mute;
+      margin: 0;
+    }
+  }
+}
+
+.case-results {
+  background: $ink;
+  color: $paper;
+  padding: $section-pad var(--gutter);
+
+  &__inner {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba($paper, .38);
+    margin-bottom: 56px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: $line-dark;
+    border: 1px solid $line-dark;
+    margin-bottom: 56px;
+
+    @media (max-width: #{$bp-mobile}) { grid-template-columns: 1fr; }
+  }
+
+  &__stat {
+    background: $ink;
+    padding: 48px 40px;
+
+    @media (max-width: #{$bp-mobile}) { padding: 36px 28px; }
+
+    &-val {
+      display: block;
+      font-family: $font-serif;
+      font-style: italic;
+      font-size: clamp(44px, 5.5vw, 80px);
+      line-height: 1;
+      color: $coral;
+      margin-bottom: 20px;
+    }
+
+    &-label {
+      display: block;
+      font-family: $font-mono;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba($paper, .45);
+      margin-bottom: 6px;
+    }
+
+    &-note {
+      display: block;
+      font-family: $font-sans;
+      font-size: 12px;
+      color: rgba($paper, .28);
+    }
+  }
+
+  &__highlights {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid $line-dark;
+    font-family: $font-sans;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba($paper, .62);
+
+    &-arrow {
+      color: $coral;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+.case-back {
+  background: $paper;
+  padding: 48px var(--gutter);
+  border-bottom: 1px solid $line;
+
+  &__inner {
+    max-width: $container;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    font-family: $font-sans;
+    font-size: 14px;
+    font-weight: 500;
+    color: $ink;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 1px solid $line;
+    border-radius: 999px;
+    transition: background .2s, border-color .2s;
+
+    &:hover { background: rgba($ink, .04); border-color: rgba($ink, .3); }
+  }
+
+  &__label {
+    font-family: $font-mono;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: $mute;
   }
 }

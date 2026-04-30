@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  const { barba, gsap } = window;
+  const { barba, gsap, ScrollTrigger } = window;
 
   if (!barba) {
     console.warn('[R&R] Barba.js not loaded.');
@@ -153,8 +153,23 @@
   }
 
   // ── Barba.js ──────────────────────────────────────────────────────────────
+  // Normalise a pathname so /, /index, /index.html all compare equal
+  function normPath(p) {
+    return p.replace(/\/index(\.html?)?$/, '/').replace(/\.html?$/, '') || '/';
+  }
+
   barba.init({
     preventRunning: true,
+
+    // Skip Barba transition for same-page anchor links (e.g. index.html#process
+    // while already on the homepage). The Lenis click handler scrolls to the section.
+    prevent: ({ el }) => {
+      const href = el.getAttribute('href') || '';
+      if (!href.includes('#')) return false;
+
+      const dest = new URL(href, window.location.href);
+      return normPath(dest.pathname) === normPath(window.location.pathname);
+    },
 
     transitions: [
       {
@@ -179,14 +194,24 @@
         async enter({ next }) {
           scrollToTop();
 
-          // Ensure new page starts invisible then snap to visible
           gsap.set(next.container, { opacity: 0 });
 
           await shutterOpen();
 
-          gsap.set(next.container, { opacity: 1 });
+          // Clear GSAP's inline opacity so child elements rely on their own
+          // CSS/GSAP states rather than inheriting a parent override
+          gsap.set(next.container, { clearProps: 'opacity' });
 
           lenisStart();
+
+          // Smooth-scroll to hash fragment after transition (e.g. index#process)
+          const hash = window.location.hash;
+          if (hash) {
+            setTimeout(() => {
+              const target = document.querySelector(hash);
+              if (target) window.RRLenis?.scrollTo(target, { offset: -80, duration: 1.4 });
+            }, 120);
+          }
         },
       },
     ],
@@ -198,6 +223,7 @@
         afterEnter() {
           reinitWaveHeroes();
           reinitAnimations();
+          requestAnimationFrame(() => requestAnimationFrame(() => ScrollTrigger.refresh()));
         },
       },
       {
@@ -205,6 +231,7 @@
         afterEnter() {
           reinitSilkHeroes();
           reinitAnimations();
+          requestAnimationFrame(() => requestAnimationFrame(() => ScrollTrigger.refresh()));
         },
       },
       {
@@ -212,6 +239,7 @@
         afterEnter() {
           reinitAnimations();
           initWorkFilters();
+          requestAnimationFrame(() => requestAnimationFrame(() => ScrollTrigger.refresh()));
         },
       },
       {
@@ -220,6 +248,7 @@
           reinitSilkHeroes();
           reinitAnimations();
           reinitContactForm();
+          requestAnimationFrame(() => requestAnimationFrame(() => ScrollTrigger.refresh()));
         },
       },
       {
@@ -227,6 +256,14 @@
         afterEnter() {
           reinitAnimations();
           window.RRServicePage?.init();
+          requestAnimationFrame(() => requestAnimationFrame(() => ScrollTrigger.refresh()));
+        },
+      },
+      {
+        namespace: 'case-study',
+        afterEnter() {
+          reinitAnimations();
+          requestAnimationFrame(() => requestAnimationFrame(() => ScrollTrigger.refresh()));
         },
       },
     ],

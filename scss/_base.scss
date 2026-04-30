@@ -197,3 +197,23 @@ button { cursor: none; }
 @media (min-width: #{$bp-tablet}) {
   .show-mobile { display: none !important; }
 }
+
+// ─── Mobile gutter: sections that wrap .container add their own h-padding,
+//     which doubles the gutter. On mobile remove the section-level h-padding
+//     so the .container is the sole source of the 20px gutter.
+@media (max-width: #{$bp-mobile}) {
+  .services,
+  .stats,
+  .cases,
+  .process,
+  .quote,
+  .pricing,
+  .studio,
+  .faq,
+  .cta-footer,
+  .services-page__list,
+  .work-page__hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

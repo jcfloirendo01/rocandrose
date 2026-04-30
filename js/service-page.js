@@ -157,7 +157,6 @@
   // ── Public init ───────────────────────────────────────────────────────────
   function init() {
     initSubnav();
-    initHero();
     initScrollReveals();
     initCounters();
   }
