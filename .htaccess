@@ -1,11 +1,2 @@
 Options +FollowSymLinks
 RewriteEngine On
-
-# Redirect /page.html → /page (canonical clean URLs)
-RewriteCond %{THE_REQUEST} /([^.]+)\.html[\s?] [NC]
-RewriteRule ^ /%1 [NC,L,R=301]
-
-# Serve /page.html when accessing /page
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
